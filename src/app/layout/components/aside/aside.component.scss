@@ -1,0 +1,11 @@
+.aside {
+  background-color: #98c1d9;
+  color: white;
+  padding: 1rem;
+
+  &__contact-info{
+    li {
+      list-style: none;
+    }
+  }
+}
