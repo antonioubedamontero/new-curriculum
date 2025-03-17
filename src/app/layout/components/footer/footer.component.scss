@@ -4,10 +4,19 @@
   text-align: center;
   padding: 1rem;
 
+  &__copy {
+    margin-bottom: 1rem;
+  }
+
   &__networks {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }

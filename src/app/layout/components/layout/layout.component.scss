@@ -1,4 +1,38 @@
 .container {
   background-color: lightgray;
   min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (min-width: 600px) {
+  /* sm */
+  .container {
+    grid-template-columns: 1fr 2fr 2fr;
+
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  }
 }
