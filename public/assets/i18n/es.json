@@ -1,0 +1,11 @@
+{
+  "header": {
+    "title": "Curriculum Vitae: "
+  },
+  "aside": {
+    "contactInfo": "Contacto:",
+    "email": "Email",
+    "phone": "Teléfono",
+    "city": "Ciudad"
+  }
+}

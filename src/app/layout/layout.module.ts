@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MainComponent } from './components/main/main.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainComponent } from './components/main/main.component';
   ],
   imports: [
     CommonModule,
-    BaseModule
+    BaseModule,
+    TranslateModule
   ],
   exports: [
     LayoutComponent
