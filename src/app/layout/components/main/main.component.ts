@@ -12,6 +12,7 @@ import { MainService } from '../../../service/main.service';
 export class MainComponent {
   summaryResponse!: SummaryResponse;
   habilities: string[] = [];
+  trainings: string[] = [];
 
   subscriptions: Subscription[] = [];
 
@@ -20,6 +21,7 @@ export class MainComponent {
   ngOnInit(): void {
     this.getSummaryFromServer();
     this.getHabilitiesFromServer();
+    this.getTrainingsFromServer();
   }
 
   getSummaryFromServer(): void {
@@ -36,6 +38,16 @@ export class MainComponent {
     const subscription = this.mainService.getHabilities().subscribe(
       {
         next: habilitiesResponse => this.habilities = habilitiesResponse.habilities,
+        error: error => console.error(error)
+      }
+    );
+    this.subscriptions.push(subscription);
+  }
+
+  getTrainingsFromServer(): void {
+    const subscription = this.mainService.getTrainings().subscribe(
+      {
+        next: trainingsResponse => this.trainings = trainingsResponse.trainings,
         error: error => console.error(error)
       }
     );
