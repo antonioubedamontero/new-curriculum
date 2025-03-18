@@ -1,12 +1,18 @@
 <aside class="aside">
-  <img class="aside__photo" src="assets/photo-cv.jpg" [alt]="'aside.alt.photoCv' | translate">
+  <img class="aside__photo" src="assets/images/photo-cv.jpg" [alt]="'aside.alt.photoCv' | translate">
 
   <h2>{{ 'aside.contactInfo' | translate }}</h2>
-  <div class="aside__contact-info">
+  <div *ngIf="identificationResponse" class="aside__contact-info">
     <ul>
-      <li class="info-title"><strong>{{ 'aside.email' | translate }}:</strong> {{ identificationResponse.email }}</li>
-      <li class="info-title"><strong>{{ 'aside.phone' | translate }}:</strong> {{ identificationResponse.phone }}</li>
-      <li class="info-title"><strong>{{ 'aside.city'  | translate }}:</strong> {{ identificationResponse.provinceCountry }}</li>
+      <li class="info-title">
+        <strong>{{ 'aside.email' | translate }}:</strong> {{ identificationResponse.email }}
+      </li>
+      <li class="info-title">
+        <strong>{{ 'aside.phone' | translate }}:</strong> {{ identificationResponse.phone }}
+      </li>
+      <li class="info-title">
+        <strong>{{ 'aside.city'  | translate }}:</strong> {{ identificationResponse.provinceCountry }}
+      </li>
     </ul>
   </div>
 </aside>

@@ -1,4 +1,4 @@
-<header class="header">
+<header *ngIf="identificationResponse" class="header">
   <h1>{{ nameAndSurname }}</h1>
   <strong class="role">{{ identificationResponse.role }}</strong>
 </header>

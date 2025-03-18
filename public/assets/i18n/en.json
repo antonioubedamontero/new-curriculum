@@ -31,11 +31,13 @@
   "footer": {
     "netWorksAlt": {
       "linkedin": "Candidate's Linkedin",
-      "github": "Candidate's Github"
+      "github": "Candidate's Github",
+      "downloadCV": "Download candidate's CV"
     },
     "networks": {
       "linkedin": "Linkedin",
-      "github": "Github"
+      "github": "Github",
+      "downloadCV": "Curriculum"
     }
   }
 }

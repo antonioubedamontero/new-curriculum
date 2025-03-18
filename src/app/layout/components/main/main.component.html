@@ -1,5 +1,5 @@
 <main class="main">
-  <section class="summary-section">
+  <section *ngIf="summaryResponse" class="summary-section">
     <h2>
       <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.summarySection' | translate" fontIcon="auto_stories"></mat-icon>
       {{ 'main.sections.summary' | translate }}
@@ -18,7 +18,7 @@
     </ul>
   </section>
 
-  <section class="training-section">
+  <section *ngIf="trainings" class="training-section">
     <h2>
       <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.trainingSection' | translate" fontIcon="school"></mat-icon>
       {{ 'main.sections.training' | translate }}
