@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { DateTime } from 'luxon';
+
 @Component({
   selector: 'app-footer',
   standalone: false,
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  currentYear: string = DateTime.now().year.toString();
 }

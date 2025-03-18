@@ -7,16 +7,22 @@
   &__copy {
     margin-bottom: 1rem;
   }
+}
 
-  &__networks {
+.networks{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 
-    a {
-      text-decoration: none;
-      cursor: pointer;
-    }
+  a {
+    text-decoration: none;
+    cursor: pointer;
   }
 }

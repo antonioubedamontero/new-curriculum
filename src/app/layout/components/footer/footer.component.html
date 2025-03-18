@@ -1,7 +1,14 @@
 <footer class="footer">
-  <h2 class="footer__copy">&copy; 2025 - Name and surname</h2>
-  <nav class="footer__networks">
-    <a href="#" target="_blank"><img src="assets/linkedin.png" alt="logo linkedin"></a>
-    <a href="#" target="_blank"><img src="assets/github.png" alt="logo github"></a>
+  <h2 class="footer__copy">&copy; {{ currentYear }} - Name and surname</h2>
+  <nav class="networks">
+    <div class="networks__container">
+      <a href="#" target="_blank"><img src="assets/linkedin.png" [alt]="'footer.networksAlt.linkedin' | translate"></a>
+      <strong>{{ 'footer.networks.linkedin' | translate }}</strong>
+    </div>
+
+    <div class="networks__container">
+      <a href="#" target="_blank"><img src="assets/github.png" [alt]="'footer.networksAlt.github' | translate"></a>
+      <strong>{{ 'footer.networks.github' | translate }}</strong>
+    </div>
   </nav>
 </footer>
