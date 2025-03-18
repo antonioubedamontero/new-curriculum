@@ -1,0 +1,32 @@
+{
+  "main": {
+    "sections": {
+      "summary": "Summary",
+      "habilities": "Habilities",
+      "training": "Training",
+      "workExperience": "Profesional Experience",
+      "webWorkExperience": "Web Development",
+      "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
+      "languages": "Idiomas"
+    }
+  },
+  "aside": {
+    "contactInfo": "Contact:",
+    "email": "Email",
+    "phone": "Phone",
+    "city": "City",
+    "alt": {
+      "photoCv": "Photograph of the candidate"
+    }
+  },
+  "footer": {
+    "netWorksAlt": {
+      "linkedin": "Candidate's Linkedin",
+      "github": "Candidate's Github"
+    },
+    "networks": {
+      "linkedin": "Linkedin",
+      "github": "Github"
+    }
+  }
+}
