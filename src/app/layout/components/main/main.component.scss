@@ -3,6 +3,9 @@ h2, h3 {
   width: 100%;
   padding-bottom: 0.3rem;
   border-bottom: 5px solid #4895ef;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .main {
   background-color: white;

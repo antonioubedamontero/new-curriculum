@@ -8,6 +8,15 @@
       "webWorkExperience": "Desarrollo Web",
       "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
       "languages": "Idiomas"
+    },
+    "ariaLabels": {
+      "habilities": "Icono de la sección de habilidades",
+      "summarySection": "Icono de la sección de resumen",
+      "trainingSection": "Icono de la sección de formación",
+      "workExperienceSection": "Icono de la sección de experiencia profesional",
+      "webWorkExperienceSection": "Icono de la sección de experiencia profesional en Web",
+      "cobolWorkExperienceSection": "Icono de la sección de experiencia profesional en Cobol",
+      "languageSection": "Icono de la sección de idiomas"
     }
   },
   "aside": {
