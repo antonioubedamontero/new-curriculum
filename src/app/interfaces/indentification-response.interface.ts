@@ -4,6 +4,8 @@ export interface IdentificationResponse {
   phone:           string;
   email:           string;
   provinceCountry: string;
+  githubUrl:       string;
+  linkedinUrl:     string;
 }
 
 export interface Identification {
