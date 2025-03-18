@@ -11,18 +11,31 @@ import { MainService } from '../../../service/main.service';
 })
 export class MainComponent {
   summaryResponse!: SummaryResponse;
+  habilities: string[] = [];
+
   subscriptions: Subscription[] = [];
 
   constructor(private mainService: MainService) {}
 
   ngOnInit(): void {
     this.getSummaryFromServer();
+    this.getHabilitiesFromServer();
   }
 
   getSummaryFromServer(): void {
     const subscription = this.mainService.getSummary().subscribe(
       {
         next: summaryResponse => this.summaryResponse = summaryResponse,
+        error: error => console.error(error)
+      }
+    );
+    this.subscriptions.push(subscription);
+  }
+
+  getHabilitiesFromServer(): void {
+    const subscription = this.mainService.getHabilities().subscribe(
+      {
+        next: habilitiesResponse => this.habilities = habilitiesResponse.habilities,
         error: error => console.error(error)
       }
     );
