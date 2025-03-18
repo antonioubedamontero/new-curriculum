@@ -4,9 +4,9 @@
   <h2>{{ 'aside.contactInfo' | translate }}</h2>
   <div class="aside__contact-info">
     <ul>
-      <li class="info-title"><strong>{{ 'aside.email' | translate }}:</strong> name&#64;gmail.com</li>
-      <li class="info-title"><strong>{{ 'aside.phone' | translate }}:</strong> 6427812</li>
-      <li class="info-title"><strong>{{ 'aside.city'  | translate }}:</strong> Madrid, Spain</li>
+      <li class="info-title"><strong>{{ 'aside.email' | translate }}:</strong> {{ identificationResponse.email }}</li>
+      <li class="info-title"><strong>{{ 'aside.phone' | translate }}:</strong> {{ identificationResponse.phone }}</li>
+      <li class="info-title"><strong>{{ 'aside.city'  | translate }}:</strong> {{ identificationResponse.provinceCountry }}</li>
     </ul>
   </div>
 </aside>
