@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SummaryResponse } from '../../../interfaces';
+import { SummaryResponse, WorkExperienceItemResponse } from '../../../interfaces';
 import { Subscription } from 'rxjs';
 import { MainService } from '../../../service/main.service';
 
@@ -15,6 +15,7 @@ export class MainComponent {
   habilities: string[] = [];
   trainings: string[] = [];
   languages: string[] = [];
+  webDeveloperExperiences: WorkExperienceItemResponse[] = [];
 
   subscriptions: Subscription[] = [];
 
@@ -25,6 +26,7 @@ export class MainComponent {
     this.getHabilitiesFromServer();
     this.getTrainingsFromServer();
     this.getLanguagesFromServer();
+    this.getWebDeveloperExperiencesFromServer();
   }
 
   getSummaryFromServer(): void {
@@ -61,6 +63,16 @@ export class MainComponent {
     const subscription = this.mainService.getLanguages().subscribe(
       {
         next: languagesResponse => this.languages = languagesResponse.languages,
+        error: error => console.error(error)
+      }
+    );
+    this.subscriptions.push(subscription);
+  }
+
+  getWebDeveloperExperiencesFromServer(): void {
+    const subscription = this.mainService.getWebDeveloperWorkExperiences().subscribe(
+      {
+        next: webDeveloperExperiences => this.webDeveloperExperiences = webDeveloperExperiences.workExperiences,
         error: error => console.error(error)
       }
     );

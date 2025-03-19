@@ -26,6 +26,36 @@ h2, h3 {
     list-style-type: circle;
 }
 
+.web-dev-companies {
+  padding-block: 1rem;
+
+  .web-dev-company-item {
+    margin-bottom: 1rem;
+    list-style-type: square;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      mat-chip {
+        background-color: #588157;
+
+        span {
+          color: white;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+.web-depeloper-description {
+  &__title {
+    margin-block: 1rem;
+  }
+}
+
 @media (min-width: 600px) {
   /* sm */
   h2 {
@@ -34,5 +64,15 @@ h2, h3 {
 
   h3 {
     width: 50%;
+  }
+
+  .web-dev-companies {
+    .web-dev-company-item {
+      &__title {
+        display: unset;
+        flex-direction: unset;
+        gap: unset;
+      }
+    }
   }
 }

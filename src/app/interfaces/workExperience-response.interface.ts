@@ -5,7 +5,6 @@ export interface WorkExperiencesResponse {
 export interface WorkExperienceItemResponse {
   company: string;
 	rangeDates: string;
-	hasManyProjects: boolean;
 	projects: ProjectItemResponse[];
 }
 

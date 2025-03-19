@@ -11,6 +11,6 @@ export const environment = {
   trainingsApiEnUrl: '/3fefc96634604619e8817a595a268de9/raw/97b87caecd8015573e75827e5f3a3a26951464df/cv-training-en.json',
   languagesApiEsUrl: '/05f47a3c9f6014f1bcc307d12e63dae8/raw/baf71f9198da218b3284814aec25e45f090785f6/cv-languages-es.json',
   languagesApiEnUrl: '/133297111611c2b3a15d1661c06953b3/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json',
-  webWorkExperienceApiEsUrl: '/369f7f4b0564e7c3dab0c18c026f1bf4/raw/8a23033480ed41a2cec354b3745756fb26faca23/cv-web-experiences-es.json',
-  webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/f353abfd94b7479fc24bb94e610e7d4b755ad129/cv-web-experiences-en.json'
+  webWorkExperienceApiEsUrl: '/369f7f4b0564e7c3dab0c18c026f1bf4/raw/1739febd450e8d0d3f0144c6e236de316527c480/cv-web-experiences-es.json',
+  webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/7cdf07b23db6fb15989a60df11800f692051f0dd/cv-web-experiences-en.json'
 };

@@ -35,7 +35,7 @@ export class MainService {
     return this.http.get<LanguagesResponse>(`${this.baseUrl}/${languagesUrl}`);
   }
 
-  getWebWorkExperiences(): Observable<WorkExperiencesResponse> {
+  getWebDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
     const webWorkExperiencesUrl = this.language === 'es' ? environment.webWorkExperienceApiEsUrl : environment.webWorkExperienceApiEnUrl;
     return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${webWorkExperiencesUrl}`);
   }
