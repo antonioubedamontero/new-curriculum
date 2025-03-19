@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HabilitiesResponse, LanguagesResponse, SummaryResponse, TrainingsResponse } from '../interfaces';
+import { HabilitiesResponse, LanguagesResponse, SummaryResponse, TrainingsResponse, WorkExperiencesResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +33,10 @@ export class MainService {
   getLanguages(): Observable<LanguagesResponse> {
     const languagesUrl = this.language === 'es' ? environment.languagesApiEsUrl : environment.languagesApiEnUrl;
     return this.http.get<LanguagesResponse>(`${this.baseUrl}/${languagesUrl}`);
+  }
+
+  getWebWorkExperiences(): Observable<WorkExperiencesResponse> {
+    const webWorkExperiencesUrl = this.language === 'es' ? environment.webWorkExperienceApiEsUrl : environment.webWorkExperienceApiEnUrl;
+    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${webWorkExperiencesUrl}`);
   }
 }
