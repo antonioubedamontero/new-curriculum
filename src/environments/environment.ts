@@ -8,5 +8,7 @@ export const environment = {
   habilitiesApiEsUrl: '/422aa414006799aa0ab721aeb39c42ff/raw/6453226b7f5ef07836f2639b1c9f8cbefd445a88/cv-habilities-es.json',
   habilitiesApiEnUrl: '/18792fe0784e2324b62924c6593beaa1/raw/e781b79c1273bdf95d8e0391c0113574b252b167/cv-habilities-en.json',
   trainingsApiEsUrl: '/c374243510103cc460f8eebe7468c0e5/raw/5f727cb7bf705742ecb30188a5d2b3bdf97bf2bd/cv-training-es.json',
-  trainingsApiEnUrl: '/3fefc96634604619e8817a595a268de9/raw/97b87caecd8015573e75827e5f3a3a26951464df/cv-training-en.json'
+  trainingsApiEnUrl: '/3fefc96634604619e8817a595a268de9/raw/97b87caecd8015573e75827e5f3a3a26951464df/cv-training-en.json',
+  languagesApiEsUrl: '/05f47a3c9f6014f1bcc307d12e63dae8/raw/baf71f9198da218b3284814aec25e45f090785f6/cv-languages-es.json',
+  languagesApiEnUrl: '/133297111611c2b3a15d1661c06953b3/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json'
 };

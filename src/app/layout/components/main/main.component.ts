@@ -11,8 +11,10 @@ import { MainService } from '../../../service/main.service';
 })
 export class MainComponent {
   summaryResponse!: SummaryResponse;
+
   habilities: string[] = [];
   trainings: string[] = [];
+  languages: string[] = [];
 
   subscriptions: Subscription[] = [];
 
@@ -22,6 +24,7 @@ export class MainComponent {
     this.getSummaryFromServer();
     this.getHabilitiesFromServer();
     this.getTrainingsFromServer();
+    this.getLanguagesFromServer();
   }
 
   getSummaryFromServer(): void {
@@ -48,6 +51,16 @@ export class MainComponent {
     const subscription = this.mainService.getTrainings().subscribe(
       {
         next: trainingsResponse => this.trainings = trainingsResponse.trainings,
+        error: error => console.error(error)
+      }
+    );
+    this.subscriptions.push(subscription);
+  }
+
+  getLanguagesFromServer(): void {
+    const subscription = this.mainService.getLanguages().subscribe(
+      {
+        next: languagesResponse => this.languages = languagesResponse.languages,
         error: error => console.error(error)
       }
     );

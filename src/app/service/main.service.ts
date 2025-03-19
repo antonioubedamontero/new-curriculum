@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HabilitiesResponse, SummaryResponse, TrainingsResponse } from '../interfaces';
+import { HabilitiesResponse, LanguagesResponse, SummaryResponse, TrainingsResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +28,10 @@ export class MainService {
   getTrainings(): Observable<TrainingsResponse> {
     const trainingsUrl = this.language === 'es' ? environment.trainingsApiEsUrl : environment.trainingsApiEnUrl;
     return this.http.get<TrainingsResponse>(`${this.baseUrl}/${trainingsUrl}`);
+  }
+
+  getLanguages(): Observable<LanguagesResponse> {
+    const languagesUrl = this.language === 'es' ? environment.languagesApiEsUrl : environment.languagesApiEnUrl;
+    return this.http.get<LanguagesResponse>(`${this.baseUrl}/${languagesUrl}`);
   }
 }

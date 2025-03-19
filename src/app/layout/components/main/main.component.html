@@ -61,8 +61,8 @@
       <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.languageSection' | translate" fontIcon="language"></mat-icon>
       {{ 'main.sections.languages' | translate }}
     </h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non rem neque. Voluptatum, hic laboriosam libero, sint impedit exercitationem doloribus dolor eligendi blanditiis vero ex earum alias obcaecati minima sed ipsa aspernatur aliquam sequi! Quia laborum dolores deleniti repellendus eaque, non a pariatur quae, laboriosam doloremque, consequatur labore necessitatibus delectus.
-    </p>
+    <ul>
+      <li *ngFor="let language of languages" [innerHtml]="language"></li>
+    </ul>
   </section>
 </main>
