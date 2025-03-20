@@ -45,7 +45,7 @@
         </h3>
       </header>
 
-      <ul class="web-dev-companies" *ngIf="webDeveloperExperiences">
+      <ul class="dev-companies" *ngIf="webDeveloperExperiences">
         <ng-container *ngFor="let companyExperience of webDeveloperExperiences">
           <app-company-section [companyExperience]="companyExperience"></app-company-section>
         </ng-container>
@@ -53,13 +53,18 @@
     </section>
 
     <section class="cobol-experience">
-      <h3>
-        <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.cobolWorkExperienceSection' | translate" fontIcon="dns"></mat-icon>
-        {{ 'main.sections.cobolWorkExperience' | translate }}
-      </h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, ab? Minus consequatur veritatis eos ipsum sapiente provident alias in assumenda animi ipsa ab itaque nisi, aut et dicta distinctio, reiciendis iusto explicabo? Incidunt voluptas cum rem, omnis ad necessitatibus autem animi aperiam eaque nesciunt facere corporis ipsam consequatur. Cumque, harum?
-      </p>
+      <header>
+        <h3>
+          <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.cobolWorkExperienceSection' | translate" fontIcon="dns"></mat-icon>
+          {{ 'main.sections.cobolWorkExperience' | translate }}
+        </h3>
+      </header>
+
+      <ul class="dev-companies" *ngIf="cobolDeveloperExperiences">
+        <ng-container *ngFor="let companyExperience of cobolDeveloperExperiences">
+          <app-company-section [companyExperience]="companyExperience"></app-company-section>
+        </ng-container>
+      </ul>
     </section>
   </section>
 

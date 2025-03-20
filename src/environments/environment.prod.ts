@@ -12,5 +12,7 @@ export const environment = {
   languagesApiEsUrl: '/05f47a3c9f6014f1bcc307d12e63dae8/raw/baf71f9198da218b3284814aec25e45f090785f6/cv-languages-es.json',
   languagesApiEnUrl: '/133297111611c2b3a15d1661c06953b3/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json',
   webWorkExperienceApiEsUrl: '/369f7f4b0564e7c3dab0c18c026f1bf4/raw/1739febd450e8d0d3f0144c6e236de316527c480/cv-web-experiences-es.json',
-  webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/7cdf07b23db6fb15989a60df11800f692051f0dd/cv-web-experiences-en.json'
+  webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/7cdf07b23db6fb15989a60df11800f692051f0dd/cv-web-experiences-en.json',
+  cobolWorkExperienceApiEsUrl: '/74179d09d734f91c6710d31524a6a638/raw/a436fd2e0d5a264d657fe77139fc2465c245419e/cv-cobol-experiences-es.json',
+  cobolWorkExperienceApiEnUrl: '/dc4c22b8eeefcaa2733b001a2d94582f/raw/7778c0fc3d43466e2c938e91a6824c7aabb5744c/cv-cobol-experiences-en.json'
 };
