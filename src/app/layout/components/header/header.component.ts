@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IndentificationService } from '../../../service/indentification.service';
+
 import { Subscription } from 'rxjs';
+
 import { IdentificationResponse } from '../../../interfaces';
+import { IndentificationService } from '../../../service';
 
 @Component({
   selector: 'app-header',

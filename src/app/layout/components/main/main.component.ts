@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { SummaryResponse, WorkExperienceItemResponse } from '../../../interfaces';
+
 import { Subscription } from 'rxjs';
-import { MainService } from '../../../service/main.service';
+
+import { MainService } from '../../../service';
 
 @Component({
   selector: 'app-main',

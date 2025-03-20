@@ -1,20 +1,20 @@
-h4 {
+h5 {
   color: #4895ef;
   width: 100%;
   padding-bottom: 0.3rem;
 }
 
-.company-item {
-  margin-block: 1rem;
+.experience-item {
+  margin-block: 1.25rem;
   list-style-type: square;
 
   &__title {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
 
     mat-chip {
-      background-color: #4895ef;
+      background-color: #ddbea9;
 
       span {
         color: white;
@@ -24,13 +24,17 @@ h4 {
   }
 }
 
+.experience-title-text {
+  font-size: 1rem;
+}
+
 @media (min-width: 600px) {
   /* sm */
-  .company-item {
+  .experience-item {
     &__title {
-      display: unset;
-      flex-direction: unset;
-      gap: unset;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.6rem;
     }
   }
 }

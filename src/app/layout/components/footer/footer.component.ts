@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { DateTime } from 'luxon';
 import { IdentificationResponse } from '../../../interfaces';
-import { IndentificationService } from '../../../service/indentification.service';
+import { IndentificationService } from '../../../service';
 
 @Component({
   selector: 'app-footer',
