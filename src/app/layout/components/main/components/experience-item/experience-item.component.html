@@ -1,0 +1,11 @@
+<div class="experience-item">
+  <h5 *ngIf="renderTitle" class="experience-item__title">
+    <mat-chip>
+      <span>{{ companyProject.rangeDates }}</span>
+    </mat-chip>
+
+    <span class="experience-title-text">{{ companyProject.company }}</span>
+  </h5>
+
+  <span [innerHTML]="companyProject.description"></span>
+</div>

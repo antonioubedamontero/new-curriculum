@@ -7,7 +7,18 @@
       "workExperience": "Experiencia Profesional",
       "webWorkExperience": "Desarrollo Web",
       "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
+      "practiceWorkExperience": "Prácticas",
       "languages": "Idiomas"
+    },
+    "ariaLabels": {
+      "habilities": "Icono de la sección de habilidades",
+      "summarySection": "Icono de la sección de resumen",
+      "trainingSection": "Icono de la sección de formación",
+      "workExperienceSection": "Icono de la sección de experiencia profesional",
+      "webWorkExperienceSection": "Icono de la sección de experiencia profesional en Web",
+      "cobolWorkExperienceSection": "Icono de la sección de experiencia profesional en Cobol",
+      "practiceWorkExperienceSection": "Icono de la sección de prácticas laborales",
+      "languageSection": "Icono de la sección de idiomas"
     }
   },
   "aside": {
@@ -22,11 +33,13 @@
   "footer": {
     "networksAlt": {
       "linkedin": "Linkedin del candidato",
-      "github": "Github del candidato"
+      "github": "Github del candidato",
+      "downloadCV": "Descargar CV del candidato"
     },
     "networks": {
       "linkedin": "Linkedin",
-      "github": "Github"
+      "github": "Github",
+      "downloadCV": "Curriculum"
     }
   }
 }

@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
-import { IndentificationService } from '../../../service/indentification.service';
 import { IdentificationResponse } from '../../../interfaces';
+import { IndentificationService } from '../../../service';
 
 @Component({
   selector: 'app-aside',

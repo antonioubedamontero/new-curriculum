@@ -1,0 +1,13 @@
+<ng-container class="projects">
+    <div *ngIf="companyProjects.length === 1; else manyProjects">
+      <app-experience-item [companyProject]="firstProject"></app-experience-item>
+    </div>
+</ng-container>
+
+<ng-template class="projects" #manyProjects>
+  <ul>
+    <li *ngFor="let project of companyProjects">
+      <app-experience-item [companyProject]="project" [isRenderTitle]="true"></app-experience-item>
+    </li>
+  </ul>
+</ng-template>

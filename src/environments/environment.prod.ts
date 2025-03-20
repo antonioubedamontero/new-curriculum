@@ -2,5 +2,19 @@ export const environment = {
   production: true,
   apiUrl: 'https://gist.githubusercontent.com/anubedam',
   identificationApiEsUrl: '/55fd911b909aba47b75edfc3e1e1da6d/raw/4043321379da6c3e1ca60624d06e78e10cc2ebb3/cv-identification-es.json',
-  identificationApiEnUrl: '/9885f26b3c458b5ee4c577a3f1ed09de/raw/60d21ab5bb746319a301c9e0dbabbd8abb429ec3/cv-identification-en.json'
+  identificationApiEnUrl: '/9885f26b3c458b5ee4c577a3f1ed09de/raw/d4df9415e328e57715643c539478935b8387ed4b/cv-identification-en.json',
+  summaryApiEsUrl: '/949b353bc3eedc7ed8cd0ae294833e2c/raw/00ea9785e9368d143b616d5e22641a0eea3e1da8/cv-summary-es.json',
+  summaryApiEnUrl: '/37eab60b165b9b4ec871e17371a49033/raw/1f3b430e0f0b857b2ba4e0101bc9b76334f27f44/cv-summary-en.json',
+  habilitiesApiEsUrl: '/422aa414006799aa0ab721aeb39c42ff/raw/6453226b7f5ef07836f2639b1c9f8cbefd445a88/cv-habilities-es.json',
+  habilitiesApiEnUrl: '/18792fe0784e2324b62924c6593beaa1/raw/e781b79c1273bdf95d8e0391c0113574b252b167/cv-habilities-en.json',
+  trainingsApiEsUrl: '/c374243510103cc460f8eebe7468c0e5/raw/5f727cb7bf705742ecb30188a5d2b3bdf97bf2bd/cv-training-es.json',
+  trainingsApiEnUrl: '/3fefc96634604619e8817a595a268de9/raw/97b87caecd8015573e75827e5f3a3a26951464df/cv-training-en.json',
+  languagesApiEsUrl: '/05f47a3c9f6014f1bcc307d12e63dae8/raw/baf71f9198da218b3284814aec25e45f090785f6/cv-languages-es.json',
+  languagesApiEnUrl: '/133297111611c2b3a15d1661c06953b3/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json',
+  webWorkExperienceApiEsUrl: '/369f7f4b0564e7c3dab0c18c026f1bf4/raw/1739febd450e8d0d3f0144c6e236de316527c480/cv-web-experiences-es.json',
+  webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/7cdf07b23db6fb15989a60df11800f692051f0dd/cv-web-experiences-en.json',
+  cobolWorkExperienceApiEsUrl: '/74179d09d734f91c6710d31524a6a638/raw/e498b7f0c4482f824614ea2bab3db550c60c6914/cv-cobol-experiences-es.json',
+  cobolWorkExperienceApiEnUrl: '/dc4c22b8eeefcaa2733b001a2d94582f/raw/d20ed0d7586b00096d9bf3c6b33f1162321e36ea/cv-cobol-experiences-en.json',
+  practiceWorkExperienceApiEsUrl: '/cb869c5d9f261afa58b3dbc3d39f9b96/raw/01eea6689a49f757a56ad2ad93f9dc39364c9e8d/cv-practice-experiences-es.json',
+  practiceWorkExperienceApiEnUrl: '/46c9d7c2bffbcff5b2abba9e396aa3cb/raw/a631377467d23ddc9f3742819e21ba7aa4229db5/cv-practice-experiences-en.json'
 };

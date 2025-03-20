@@ -1,0 +1,40 @@
+h5 {
+  color: #4895ef;
+  width: 100%;
+  padding-bottom: 0.3rem;
+}
+
+.experience-item {
+  margin-block: 1.25rem;
+  list-style-type: square;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    mat-chip {
+      background-color: #ddbea9;
+
+      span {
+        color: white;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+.experience-title-text {
+  font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+  /* sm */
+  .experience-item {
+    &__title {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.6rem;
+    }
+  }
+}

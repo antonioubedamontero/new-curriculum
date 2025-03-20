@@ -3,7 +3,11 @@ h2, h3 {
   width: 100%;
   padding-bottom: 0.3rem;
   border-bottom: 5px solid #4895ef;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
 .main {
   background-color: white;
   padding: 1rem;
@@ -16,13 +20,20 @@ h2, h3 {
   gap: 1rem;
 }
 
+.habilities-section ul,
+.training-section ul,
+.languages-section ul {
+    padding-block: 1rem;
+    list-style-type: circle;
+}
+
+.dev-companies {
+  margin-block: 1.5rem;
+}
+
 @media (min-width: 600px) {
   /* sm */
-  h2 {
-    width: 75%;
-  }
-
   h3 {
-    width: 50%;
+    width: 75%;
   }
 }
