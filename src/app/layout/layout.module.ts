@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AsideComponent } from './components/aside/aside.component';
 import { BaseModule } from '../base/base.module';
-import { CompanyProjectComponent } from './components/main/components/company-project/company-project.component';
+import { CompanyProjectsComponent } from './components/main/components/company-projects/company-projects.component';
 import { CompanySectionComponent } from './components/main/components/company-section/company-section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     AsideComponent,
-    CompanyProjectComponent,
+    CompanyProjectsComponent,
     CompanySectionComponent,
     FooterComponent,
     HeaderComponent,
