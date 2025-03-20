@@ -5,7 +5,10 @@
   <div *ngIf="identificationResponse" class="aside__contact-info">
     <ul>
       <li class="info-title">
-        <strong>{{ 'aside.email' | translate }}:</strong> {{ identificationResponse.email }}
+        <strong>{{ 'aside.email' | translate }}:</strong>
+        <a href="mailto:anubedam@gmail.com" target="_blank">
+          {{ identificationResponse.email }}
+        </a>
       </li>
       <li class="info-title">
         <strong>{{ 'aside.phone' | translate }}:</strong> {{ identificationResponse.phone }}
