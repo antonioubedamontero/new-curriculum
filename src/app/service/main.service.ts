@@ -44,4 +44,9 @@ export class MainService {
     const cobolWorkExperiencesUrl = this.language === 'es' ? environment.cobolWorkExperienceApiEsUrl : environment.cobolWorkExperienceApiEnUrl;
     return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${cobolWorkExperiencesUrl}`);
   }
+
+  getPracticeDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
+    const practiceWorkExperiencesUrl = this.language === 'es' ? environment.practiceWorkExperienceApiEsUrl : environment.practiceWorkExperienceApiEnUrl;
+    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${practiceWorkExperiencesUrl}`);
+  }
 }

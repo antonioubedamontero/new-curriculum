@@ -7,6 +7,7 @@
       "workExperience": "Profesional Experience",
       "webWorkExperience": "Web Development",
       "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
+      "practiceWorkExperience": "Practices",
       "languages": "Idiomas"
     },
     "ariaLabels": {
@@ -16,6 +17,7 @@
       "workExperienceSection": "Professional experience section icon",
       "webWorkExperienceSection": "Web professional experience section icon",
       "cobolWorkExperienceSection": "Cobol experience section icon",
+      "practiceWorkExperienceSection": "Icon for the work experience section",
       "languageSection": "Language section icon"
     }
   },

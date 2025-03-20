@@ -66,6 +66,21 @@
         </ng-container>
       </ul>
     </section>
+
+    <section class="practice-experience">
+      <header>
+        <h3>
+          <mat-icon aria-hidden="false" [ariaLabel]="'main.ariaLabels.practiceWorkExperienceSection' | translate" fontIcon="badge"></mat-icon>
+          {{ 'main.sections.practiceWorkExperience' | translate }}
+        </h3>
+      </header>
+
+      <ul class="dev-companies" *ngIf="practiceDeveloperExperiences">
+        <ng-container *ngFor="let companyExperience of practiceDeveloperExperiences">
+          <app-company-section [companyExperience]="companyExperience"></app-company-section>
+        </ng-container>
+      </ul>
+    </section>
   </section>
 
   <section class="languages-section">

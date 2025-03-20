@@ -13,6 +13,8 @@ export const environment = {
   languagesApiEnUrl: '/133297111611c2b3a15d1661c06953b3/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json',
   webWorkExperienceApiEsUrl: '/369f7f4b0564e7c3dab0c18c026f1bf4/raw/1739febd450e8d0d3f0144c6e236de316527c480/cv-web-experiences-es.json',
   webWorkExperienceApiEnUrl: '/166830c52da93580a0112f5c97859d6c/raw/7cdf07b23db6fb15989a60df11800f692051f0dd/cv-web-experiences-en.json',
-  cobolWorkExperienceApiEsUrl: '/74179d09d734f91c6710d31524a6a638/raw/a436fd2e0d5a264d657fe77139fc2465c245419e/cv-cobol-experiences-es.json',
-  cobolWorkExperienceApiEnUrl: '/dc4c22b8eeefcaa2733b001a2d94582f/raw/7778c0fc3d43466e2c938e91a6824c7aabb5744c/cv-cobol-experiences-en.json'
+  cobolWorkExperienceApiEsUrl: '/74179d09d734f91c6710d31524a6a638/raw/e498b7f0c4482f824614ea2bab3db550c60c6914/cv-cobol-experiences-es.json',
+  cobolWorkExperienceApiEnUrl: '/dc4c22b8eeefcaa2733b001a2d94582f/raw/d20ed0d7586b00096d9bf3c6b33f1162321e36ea/cv-cobol-experiences-en.json',
+  practiceWorkExperienceApiEsUrl: '/cb869c5d9f261afa58b3dbc3d39f9b96/raw/01eea6689a49f757a56ad2ad93f9dc39364c9e8d/cv-practice-experiences-es.json',
+  practiceWorkExperienceApiEnUrl: '/46c9d7c2bffbcff5b2abba9e396aa3cb/raw/a631377467d23ddc9f3742819e21ba7aa4229db5/cv-practice-experiences-en.json'
 };

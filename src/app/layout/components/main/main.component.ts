@@ -17,6 +17,7 @@ export class MainComponent {
   languages: string[] = [];
   webDeveloperExperiences: WorkExperienceItemResponse[] = [];
   cobolDeveloperExperiences: WorkExperienceItemResponse[] = [];
+  practiceDeveloperExperiences: WorkExperienceItemResponse[] = [];
 
   subscriptions: Subscription[] = [];
 
@@ -29,6 +30,7 @@ export class MainComponent {
     this.getLanguagesFromServer();
     this.getWebDeveloperExperiencesFromServer();
     this.getCobolDeveloperExperiencesFromServer();
+    this.getPracticeDeveloperExperiencesFromServer();
   }
 
   getSummaryFromServer(): void {
@@ -85,6 +87,16 @@ export class MainComponent {
     const subscription = this.mainService.getCobolDeveloperWorkExperiences().subscribe(
       {
         next: cobolDeveloperExperiences => this.cobolDeveloperExperiences = cobolDeveloperExperiences.workExperiences,
+        error: error => console.error(error)
+      }
+    );
+    this.subscriptions.push(subscription);
+  }
+
+  getPracticeDeveloperExperiencesFromServer(): void {
+    const subscription = this.mainService.getPracticeDeveloperWorkExperiences().subscribe(
+      {
+        next: pracriceDeveloperExperiences => this.practiceDeveloperExperiences = pracriceDeveloperExperiences.workExperiences,
         error: error => console.error(error)
       }
     );
