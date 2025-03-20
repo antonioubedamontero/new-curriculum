@@ -1,0 +1,15 @@
+<li class="company-item">
+  <article>
+    <header>
+      <h4 class="company-item__title">
+        <mat-chip>
+          <span>{{ companyExperience.rangeDates }}</span>
+        </mat-chip>
+
+        {{ companyExperience.company }}
+      </h4>
+    </header>
+
+    <app-company-projects [companyProjects]="companyExperience.projects"></app-company-projects>
+  </article>
+</li>

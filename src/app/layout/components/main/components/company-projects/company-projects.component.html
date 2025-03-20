@@ -1,0 +1,23 @@
+<div class="projects">
+    <div *ngIf="companyProjects.length === 1; else manyProjects">
+      <div class="projects__title" *ngIf="companyProjects[0].company">
+        <strong>
+          <u>{{ firstProject.company }}</u>
+        </strong>
+      </div>
+      <span [innerHTML]="firstProject.description"></span>
+    </div>
+</div>
+
+<ng-template #manyProjects>
+  <ul>
+    <li *ngFor="let project of companyProjects">
+      <div class="projects__title">
+        <strong>
+          <u>{{ project.company }}</u>
+        </strong>
+      </div>
+      <span [innerHTML]="project.description"></span>
+    </li>
+  </ul>
+</ng-template>

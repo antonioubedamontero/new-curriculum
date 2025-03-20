@@ -46,31 +46,9 @@
       </header>
 
       <ul class="web-dev-companies" *ngIf="webDeveloperExperiences">
-        <li class="web-dev-company-item" *ngFor="let webDeveloperExperience of webDeveloperExperiences">
-          <article>
-            <header>
-              <strong class="web-dev-company-item__title">
-                <mat-chip>
-                  <span>{{ webDeveloperExperience.rangeDates }}</span>
-                </mat-chip>
-                {{ webDeveloperExperience.company }}
-              </strong>
-            </header>
-
-            <div class="web-depeloper-description"
-              *ngIf="webDeveloperExperience.projects.length === 1">
-
-              <div class="web-depeloper-description__title"
-                *ngIf="webDeveloperExperience.projects[0].company">
-                <strong>
-                  <u>{{ webDeveloperExperience.projects[0].company }}</u>
-                </strong>
-              </div>
-
-              <span [innerHTML]="webDeveloperExperience.projects[0].description"></span>
-            </div>
-          </article>
-        </li>
+        <ng-container *ngFor="let companyExperience of webDeveloperExperiences">
+          <app-company-section [companyExperience]="companyExperience"></app-company-section>
+        </ng-container>
       </ul>
     </section>
 
