@@ -1,0 +1,43 @@
+h4 {
+  color: #4895ef;
+  width: 100%;
+  padding-bottom: 0.3rem;
+}
+
+.web-dev-company-item {
+  margin-block: 1rem;
+  list-style-type: square;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    mat-chip {
+      background-color: #588157;
+
+      span {
+        color: white;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+/* This is for work experience in company item */
+.web-depeloper-description {
+  &__title {
+    margin-block: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  /* sm */
+  .web-dev-company-item {
+    &__title {
+      display: unset;
+      flex-direction: unset;
+      gap: unset;
+    }
+  }
+}

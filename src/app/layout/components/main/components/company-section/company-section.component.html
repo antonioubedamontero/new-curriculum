@@ -1,0 +1,26 @@
+<li class="web-dev-company-item">
+  <article>
+    <header>
+      <h4 class="web-dev-company-item__title">
+        <mat-chip>
+          <span>{{ companyExperience.rangeDates }}</span>
+        </mat-chip>
+
+        {{ companyExperience.company }}
+      </h4>
+    </header>
+
+    <div class="web-depeloper-description"
+      *ngIf="companyExperience.projects.length === 1">
+
+      <div class="web-depeloper-description__title"
+        *ngIf="companyExperience.projects[0].company">
+        <strong>
+          <u>{{ companyExperience.projects[0].company }}</u>
+        </strong>
+      </div>
+
+      <span [innerHTML]="companyExperience.projects[0].description"></span>
+    </div>
+  </article>
+</li>
