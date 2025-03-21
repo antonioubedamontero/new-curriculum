@@ -14,6 +14,13 @@ describe('ExperienceItemComponent', () => {
 
     fixture = TestBed.createComponent(ExperienceItemComponent);
     component = fixture.componentInstance;
+
+    component.companyProject = {
+      company: 'company',
+    	rangeDates: 'date1-date2',
+	    description: 'description'
+    }
+
     fixture.detectChanges();
   });
 
