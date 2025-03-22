@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  constructor(private translate: TranslateService) {}
+  constructor(public translate: TranslateService) {}
 
   async ngOnInit() {
     // Configure language on initial load

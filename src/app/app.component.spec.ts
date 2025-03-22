@@ -2,10 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpLoaderFactory } from './app.module';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -14,25 +12,34 @@ import { Component } from '@angular/core';
 })
 export class LayoutComponentMock{}
 
+@Injectable({
+  providedIn: 'root'
+})
+export class TranslateServiceMock {
+  getBrowserLang(): string {
+    return 'en';
+  }
+
+  use(key: string): any {
+    return null;
+  };
+}
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterModule.forRoot([]),
-        TranslateModule.forRoot({
-          loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient],
-          },
-        }),
       ],
       declarations: [
         AppComponent,
         LayoutComponentMock
       ],
       providers: [
-        provideHttpClient(withFetch())  // Configure HttpClient when using with modules
+        {
+          provide: TranslateService,
+          useClass: TranslateServiceMock
+        }
       ],
     }).compileComponents();
   });
@@ -40,6 +47,54 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+
+    app.ngOnInit(); // Call explicity onInit (not called automatically)
+
     expect(app).toBeTruthy();
   });
+
+  it('should have app-layout component inside', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    app.ngOnInit(); // Call explicity onInit (not called automatically)
+
+    const layoutComponent = fixture.debugElement.nativeElement.querySelector('app-layout');
+
+    expect(layoutComponent).toBeTruthy();
+  });
+
+  describe('- when storage has language with value..', () => {
+    it('es or en (a value), it uses that language in translate', () => {
+      const getItemStorageSpy = spyOn(window.localStorage, 'getItem').and.returnValue('es');
+
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.componentInstance;
+
+      const translateUseSpy = spyOn(app.translate, 'use');
+
+      app.ngOnInit(); // Call explicity onInit (not called automatically)
+
+      expect(getItemStorageSpy).toHaveBeenCalledOnceWith('language');
+      expect(translateUseSpy).toHaveBeenCalledOnceWith('es');
+    })
+
+    it('no value, it uses the language that is in browserLang in translate', () => {
+      const getItemStorageSpy = spyOn(window.localStorage, 'getItem',).and.returnValue(null);
+
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.componentInstance;
+
+      const getBrowserLangSpy = spyOn(app.translate, 'getBrowserLang').and.callThrough();
+      const translateUseSpy = spyOn(app.translate, 'use');
+
+      app.ngOnInit(); // Call explicity onInit (not called automatically)
+
+      expect(getItemStorageSpy).toHaveBeenCalledOnceWith('language');
+      expect(getBrowserLangSpy).toHaveBeenCalledTimes(1);
+      expect(translateUseSpy).toHaveBeenCalledOnceWith('en');
+    })
+  });
 });
+
+
