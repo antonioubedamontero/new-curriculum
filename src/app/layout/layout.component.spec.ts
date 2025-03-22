@@ -31,7 +31,6 @@ export class MainComponentMock{}
 })
 export class FooterComponentMock{}
 
-
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
@@ -55,5 +54,25 @@ describe('LayoutComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a header component', () => {
+    const headerComponent = fixture.debugElement.nativeElement.querySelector('app-header');
+    expect(headerComponent).toBeTruthy();
+  });
+
+  it('should have an aside component', () => {
+    const asideComponent = fixture.debugElement.nativeElement.querySelector('app-aside');
+    expect(asideComponent).toBeTruthy();
+  });
+
+  it('should have a main component', () => {
+    const mainComponent = fixture.debugElement.nativeElement.querySelector('app-main');
+    expect(mainComponent).toBeTruthy();
+  });
+
+  it('should have a footer component', () => {
+    const footerComponent = fixture.debugElement.nativeElement.querySelector('app-footer');
+    expect(footerComponent).toBeTruthy();
   });
 });
