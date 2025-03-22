@@ -3,7 +3,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { TranslateService } from '@ngx-translate/core';
-import { Component, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateServiceMock } from './mocks/services/translate-mock.service';
 
 @Component({
   selector: 'app-layout',
@@ -11,19 +12,6 @@ import { Component, Injectable } from '@angular/core';
   template: '<p>layout</p>',
 })
 export class LayoutComponentMock{}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class TranslateServiceMock {
-  getBrowserLang(): string {
-    return 'en';
-  }
-
-  use(key: string): any {
-    return null;
-  };
-}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
