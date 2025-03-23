@@ -25,8 +25,6 @@ describe('ExperienceItemComponent', () => {
     component.companyProject = projectItemResponseWithProjectAndRangesMock;
     component.isRenderTitle = true;
 
-    component.ngOnInit();
-
     fixture.detectChanges();
   });
 

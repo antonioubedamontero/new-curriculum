@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 import { ProjectItemResponse } from '../../../../../interfaces';
 
@@ -8,11 +8,11 @@ import { ProjectItemResponse } from '../../../../../interfaces';
   templateUrl: './experience-item.component.html',
   styleUrl: './experience-item.component.scss'
 })
-export class ExperienceItemComponent implements OnInit{
+export class ExperienceItemComponent implements OnChanges{
   @Input() companyProject!: ProjectItemResponse;
   @Input() isRenderTitle? = false;
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     this.validateMandatoryFields();
   }
 
