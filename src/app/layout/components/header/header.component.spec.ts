@@ -1,9 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpLoaderFactory } from '../../../app.module';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { MocksModule } from '../../../mocks/mocks.module';
+import { TranslateServiceMock } from '../../../mocks/services/translate-mock.service';
+
+import { identificationResponseMock } from '../../../mocks/data/identification-response-mock';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -13,26 +16,37 @@ describe('HeaderComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [HeaderComponent],
       imports: [
-        TranslateModule.forRoot({
-          loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient],
-          },
-        })
+        MocksModule
       ],
       providers: [
-        provideHttpClient(withFetch())  // Configure HttpClient when using with modules
+        provideHttpClient(),  // Configure HttpClient when using with modules
+        provideHttpClientTesting,
+        TranslateServiceMock
       ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+
+    component.identificationResponse = identificationResponseMock;
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a name', () => {
+    const h1Element: HTMLLIElement = fixture.debugElement.nativeElement.querySelector('h1');
+    expect(h1Element).toBeTruthy();
+    expect(h1Element.textContent).toBeTruthy();
+  });
+
+  it('should have a role', () => {
+    const htmlRoleElement: HTMLLIElement = fixture.debugElement.nativeElement.querySelector('.role');
+    expect(htmlRoleElement).toBeTruthy();
+    expect(htmlRoleElement.textContent).toBeTruthy();
   });
 });
