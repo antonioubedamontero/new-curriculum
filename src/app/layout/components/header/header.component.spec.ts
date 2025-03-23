@@ -7,6 +7,8 @@ import { MocksModule } from '../../../mocks/mocks.module';
 import { TranslateServiceMock } from '../../../mocks/services/translate-mock.service';
 
 import { identificationResponseMock } from '../../../mocks/data/identification-response-mock';
+import { IndentificationService } from '../../../service';
+import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -21,7 +23,11 @@ describe('HeaderComponent', () => {
       providers: [
         provideHttpClient(),  // Configure HttpClient when using with modules
         provideHttpClientTesting,
-        TranslateServiceMock
+        TranslateServiceMock,
+        {
+          provide: IndentificationService,
+          useClass: IdentificationMockService
+        }
       ]
     })
     .compileComponents();
@@ -30,6 +36,7 @@ describe('HeaderComponent', () => {
     component = fixture.componentInstance;
 
     component.identificationResponse = identificationResponseMock;
+    component.ngOnInit();
 
     fixture.detectChanges();
   });
