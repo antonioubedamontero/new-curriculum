@@ -39,13 +39,13 @@ describe('HeaderComponent', () => {
   });
 
   it('should have a name', () => {
-    const h1Element: HTMLLIElement = fixture.debugElement.nativeElement.querySelector('h1');
+    const h1Element: HTMLElement = fixture.debugElement.nativeElement.querySelector('h1');
     expect(h1Element).toBeTruthy();
     expect(h1Element.textContent).toBeTruthy();
   });
 
   it('should have a role', () => {
-    const htmlRoleElement: HTMLLIElement = fixture.debugElement.nativeElement.querySelector('.role');
+    const htmlRoleElement: HTMLElement = fixture.debugElement.nativeElement.querySelector('.role');
     expect(htmlRoleElement).toBeTruthy();
     expect(htmlRoleElement.textContent).toBeTruthy();
   });
