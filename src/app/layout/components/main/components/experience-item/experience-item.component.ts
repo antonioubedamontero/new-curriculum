@@ -13,12 +13,16 @@ export class ExperienceItemComponent implements OnInit{
   @Input() isRenderTitle? = false;
 
   ngOnInit(): void {
-    if (!this.companyProject) {
-      throw new Error('Missing project item response in ExperienceItemComponent.');
-    }
+    this.validateMandatoryFields();
   }
 
   get renderTitle(): boolean {
     return !!this.companyProject.rangeDates && !!this.companyProject.company && !!this.isRenderTitle;
+  }
+
+  private validateMandatoryFields(): void {
+    if (!this.companyProject) {
+      throw new Error('Missing project item response in ExperienceItemComponent.');
+    }
   }
 }

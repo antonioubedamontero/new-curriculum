@@ -49,11 +49,11 @@ describe('CompanySectionComponent', () => {
   });
 
   it('should render company title and icon', () => {
-    const htmlCompanyIcon: HTMLElement = fixture.debugElement.nativeElement.querySelector('#company-icon');
+    const htmlCompanyIcon: HTMLElement = fixture.debugElement.nativeElement.querySelector('.company-icon');
     expect(htmlCompanyIcon).toBeTruthy();
     expect(htmlCompanyIcon.innerHTML).toBeTruthy();
 
-    const htmlCompanyTitle: HTMLElement = fixture.debugElement.nativeElement.querySelector('#company-title');
+    const htmlCompanyTitle: HTMLElement = fixture.debugElement.nativeElement.querySelector('.company-title');
     expect(htmlCompanyTitle).toBeTruthy();
     expect(htmlCompanyTitle.innerHTML).toBeTruthy();
   })
