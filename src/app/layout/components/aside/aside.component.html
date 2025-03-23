@@ -4,16 +4,18 @@
   <h2>{{ 'aside.contactInfo' | translate }}</h2>
   <div *ngIf="identificationResponse" class="aside__contact-info">
     <ul>
-      <li class="info-title">
+      <li id="email" class="info-title">
         <strong>{{ 'aside.email' | translate }}:</strong>
         <a href="mailto:anubedam@gmail.com" target="_blank">
           {{ identificationResponse.email }}
         </a>
       </li>
-      <li class="info-title">
+
+      <li id="phone" class="info-title">
         <strong>{{ 'aside.phone' | translate }}:</strong> {{ identificationResponse.phone }}
       </li>
-      <li class="info-title">
+
+      <li id="city" class="info-title">
         <strong>{{ 'aside.city'  | translate }}:</strong> {{ identificationResponse.provinceCountry }}
       </li>
     </ul>

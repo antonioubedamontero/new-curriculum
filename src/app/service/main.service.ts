@@ -11,7 +11,7 @@ import { HabilitiesResponse, LanguagesResponse, SummaryResponse, TrainingsRespon
 })
 export class MainService {
   private readonly baseUrl = environment.apiUrl;
-  private language: string;
+  public language: string;
 
   constructor(private http: HttpClient) {
     this.language = localStorage.getItem('language') || 'es';

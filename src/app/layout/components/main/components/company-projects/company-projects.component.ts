@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProjectItemResponse } from '../../../../../interfaces';
 
 @Component({
@@ -7,13 +7,10 @@ import { ProjectItemResponse } from '../../../../../interfaces';
   templateUrl: './company-projects.component.html',
   styleUrl: './company-projects.component.scss'
 })
-export class CompanyProjectsComponent implements OnInit {
+export class CompanyProjectsComponent {
   @Input() companyProjects: ProjectItemResponse[] = [];
 
   constructor() {}
-
-  ngOnInit(): void {
-  }
 
   get firstProject(): ProjectItemResponse {
     return this.companyProjects[0];

@@ -13,6 +13,7 @@ import { IndentificationService } from '../../../service';
 })
 export class HeaderComponent implements OnInit, OnDestroy{
   identificationResponse!: IdentificationResponse;
+
   subscriptions: Subscription[] = [];
 
   constructor(private identificationService: IndentificationService) {}
