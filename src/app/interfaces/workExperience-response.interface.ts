@@ -1,5 +1,12 @@
-export interface WorkExperiencesResponse {
+export interface workExperienceResponseDetail {
+  sectionTitle: string;
+  sectionIcon: string;
+  sectionAriaTitle: string;
   workExperiences: WorkExperienceItemResponse[];
+}
+
+export interface WorkExperiencesResponse {
+  [sectionName: string]: workExperienceResponseDetail;
 }
 
 export interface WorkExperienceItemResponse {

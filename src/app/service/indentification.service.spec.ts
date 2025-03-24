@@ -27,14 +27,7 @@ describe('IndentificationService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return data when getIdentificationMethod is called', (done) => {
-    let identificationResponse: IdentificationResponse;
-    spyOn(service, 'getIdentification').and.returnValue(of(identificationResponseMock));
-
-    service.getIdentification().subscribe(resp => {
-      identificationResponse = resp
-      expect(identificationResponse).toBeTruthy();
-      done();
-    });
+  it('should return data when getIdentificationMethod is called', () => {
+    expect(service.getIdentification()).toBeTruthy();
   })
 });

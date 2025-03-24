@@ -26,15 +26,7 @@ export class MainMockService {
       return of(languagesResponseMock);
     }
 
-    getWebDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
-      return of(workExperiencesResponseMock);
-    }
-
-    getCobolDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
-      return of(workExperiencesResponseMock);
-    }
-
-    getPracticeDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
+    getDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
       return of(workExperiencesResponseMock);
     }
 }

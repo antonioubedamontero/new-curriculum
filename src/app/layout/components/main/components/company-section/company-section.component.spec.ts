@@ -36,6 +36,8 @@ describe('CompanySectionComponent', () => {
 
     component.companyExperience = workExperienceItemResponseMock1;
 
+    component.ngOnChanges();
+
     fixture.detectChanges();
   });
 

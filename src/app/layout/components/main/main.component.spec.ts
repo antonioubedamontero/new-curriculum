@@ -29,9 +29,7 @@ describe('MainComponent', () => {
   let getHabilitiesSpy: any;
   let getTrainingsSpy: any;
   let getLanguagesSpy: any;
-  let getWebDeveloperExperiencesSpy: any;
-  let getCobolDeveloperExperiencesSpy: any;
-  let getPracticeDeveloperExperiencesSpy: any;
+  let getDeveloperExperiencesSpy: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -62,9 +60,7 @@ describe('MainComponent', () => {
     getHabilitiesSpy = spyOn(component, 'getHabilitiesFromServer').and.callThrough();
     getTrainingsSpy = spyOn(component, 'getTrainingsFromServer').and.callThrough();
     getLanguagesSpy = spyOn(component, 'getLanguagesFromServer').and.callThrough();
-    getWebDeveloperExperiencesSpy = spyOn(component, 'getWebDeveloperExperiencesFromServer').and.callThrough();
-    getCobolDeveloperExperiencesSpy = spyOn(component, 'getCobolDeveloperExperiencesFromServer').and.callThrough();
-    getPracticeDeveloperExperiencesSpy = spyOn(component, 'getPracticeDeveloperExperiencesFromServer').and.callThrough();
+    getDeveloperExperiencesSpy = spyOn(component, 'getDeveloperExperiencesFromServer').and.callThrough();
 
     fixture.detectChanges();
   });
@@ -90,20 +86,8 @@ describe('MainComponent', () => {
       expect(getLanguagesSpy).toHaveBeenCalled();
     });
 
-    it('get web developer experiences', () => {
-      expect(getWebDeveloperExperiencesSpy).toHaveBeenCalled();
-    });
-
-    it('get web developer experiences', () => {
-      expect(getWebDeveloperExperiencesSpy).toHaveBeenCalled();
-    });
-
-    it('get cobol developer experiences', () => {
-      expect(getCobolDeveloperExperiencesSpy).toHaveBeenCalled();
-    });
-
-    it('get practice developer experiences', () => {
-      expect(getPracticeDeveloperExperiencesSpy).toHaveBeenCalled();
+    it('get developer experiences', () => {
+      expect(getDeveloperExperiencesSpy).toHaveBeenCalled();
     });
   });
 
@@ -128,24 +112,19 @@ describe('MainComponent', () => {
       expect(workExperienceSection).toBeTruthy();
     });
 
-    it('web developer experience section', () => {
-      const webDeveloperExperienceSection = fixture.debugElement.nativeElement.querySelector('.web-developer-experience');
-      expect(webDeveloperExperienceSection).toBeTruthy();
-    });
-
-    it('cobol experience section', () => {
-      const cobolExperienceSection = fixture.debugElement.nativeElement.querySelector('.cobol-experience');
-      expect(cobolExperienceSection).toBeTruthy();
-    });
-
-    it('practice experience section', () => {
-      const practiceExperienceSection = fixture.debugElement.nativeElement.querySelector('.practice-experience');
-      expect(practiceExperienceSection).toBeTruthy();
+    it('developer experience section', () => {
+      const developerExperienceSection = fixture.debugElement.nativeElement.querySelector('.developer-experience');
+      expect(developerExperienceSection).toBeTruthy();
     });
 
     it('languages section', () => {
       const languagesSection = fixture.debugElement.nativeElement.querySelector('.languages-section');
       expect(languagesSection).toBeTruthy();
+    });
+
+    it('developerExperiencesSections should give an empty array when developerExperiences doesn\'t exists', () => {
+      (component.developerExperiences as any) = null;
+      expect(component.developerExperiencesSections).toEqual([]);
     });
   });
 });

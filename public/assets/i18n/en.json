@@ -5,19 +5,13 @@
       "habilities": "Habilities",
       "training": "Training",
       "workExperience": "Profesional Experience",
-      "webWorkExperience": "Web Development",
-      "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
-      "practiceWorkExperience": "Practices",
       "languages": "Idiomas"
     },
     "ariaLabels": {
-      "habilities": "Skills section icon",
       "summarySection": "Summary section icon",
+      "habilities": "Skills section icon",
       "trainingSection": "Training section icon",
       "workExperienceSection": "Professional experience section icon",
-      "webWorkExperienceSection": "Web professional experience section icon",
-      "cobolWorkExperienceSection": "Cobol experience section icon",
-      "practiceWorkExperienceSection": "Icon for the work experience section",
       "languageSection": "Language section icon"
     }
   },
@@ -28,18 +22,6 @@
     "city": "City",
     "alt": {
       "photoCv": "Photograph of the candidate"
-    }
-  },
-  "footer": {
-    "netWorksAlt": {
-      "linkedin": "Candidate's Linkedin",
-      "github": "Candidate's Github",
-      "downloadCV": "Download candidate's CV"
-    },
-    "networks": {
-      "linkedin": "Linkedin",
-      "github": "Github",
-      "downloadCV": "Curriculum"
     }
   }
 }

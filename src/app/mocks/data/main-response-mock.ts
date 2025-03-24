@@ -1,4 +1,4 @@
-import { HabilitiesResponse, LanguagesResponse, ProjectItemResponse, SummaryResponse, TrainingsResponse, WorkExperienceItemResponse, WorkExperiencesResponse } from "../../interfaces";
+import { HabilitiesResponse, LanguagesResponse, ProjectItemResponse, SummaryResponse, TrainingsResponse, WorkExperienceItemResponse, workExperienceResponseDetail, WorkExperiencesResponse } from "../../interfaces";
 
 export const summaryResponseMock: SummaryResponse = {
   summary: 'mock summary'
@@ -41,9 +41,21 @@ export const workExperienceItemResponseMock2: WorkExperienceItemResponse = {
   projects: [projectItemResponseWithoutProjectAndRangesMock]
 }
 
+export const workExperienceResponseDetailMock: workExperienceResponseDetail = {
+  sectionTitle: 'work section title mock',
+    sectionIcon: 'icon section title mock',
+    sectionAriaTitle: 'aria section title mock',
+    workExperiences: [
+      workExperienceItemResponseMock1,
+      workExperienceItemResponseMock2
+    ]
+}
+
 export const workExperiencesResponseMock: WorkExperiencesResponse = {
-  workExperiences: [
-    workExperienceItemResponseMock1,
-    workExperienceItemResponseMock2
-  ]
+  workSection1: {
+    ...workExperienceResponseDetailMock
+  },
+  workSection2: {
+    ...workExperienceResponseDetailMock
+  }
 }

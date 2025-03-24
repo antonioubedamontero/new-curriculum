@@ -1,26 +1,22 @@
 <footer *ngIf="identificationResponse" class="footer">
   <h2 class="footer__copy">&copy; {{ currentYear }} - {{ nameAndSurname }}</h2>
   <nav>
-    <!-- TODO: Refactor to group networks inside identificationResponse, with icon, href, name and translation to not DRY -->
-    <ul class="networks">
-      <li class="networks__container">
-        <a [href]="identificationResponse.linkedinUrl" target="_blank"><img src="assets/images/linkedin.png" [alt]="'footer.networksAlt.linkedin' | translate"></a>
-        <strong>{{ 'footer.networks.linkedin' | translate }}</strong>
-      </li>
+    <ul *ngIf="identificationResponse?.netWorks" class="networks">
+      <ng-container *ngFor="let network of identificationResponse.netWorks">
+        <li *ngIf="network.shouldDownLoad" class="networks__container">
+          <a [href]="network.url" download>
+            <img [src]="network.icon" [alt]="network.ariaLabel">
+          </a>
+          <strong>{{ network.label }}</strong>
+        </li>
 
-      <li class="networks__container">
-        <a [href]="identificationResponse.githubUrl" target="_blank">
-          <img src="assets/images/github.png" [alt]="'footer.networksAlt.github' | translate">
-        </a>
-        <strong>{{ 'footer.networks.github' | translate }}</strong>
-      </li>
-
-      <li class="networks__container">
-        <a href="assets/documents/CV-Antonio-Ubeda-Montero.pdf">
-          <img class="pdf-icon" src="assets/images/pdf.png" [alt]="'footer.networksAlt.downloadCV' | translate">
-        </a>
-        <strong>{{ 'footer.networks.downloadCV' | translate }}</strong>
-      </li>
+        <li *ngIf="!network.shouldDownLoad" class="networks__container">
+          <a [href]="network.url" target="_blank">
+            <img [src]="network.icon" [alt]="network.ariaLabel">
+          </a>
+          <strong>{{ network.label }}</strong>
+        </li>
+      </ng-container>
     </ul>
   </nav>
 </footer>

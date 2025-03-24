@@ -17,14 +17,6 @@ describe('MainService', () => {
       ],
     });
     service = TestBed.inject(MainService);
-
-    // spyOn(service, 'getHabilities').and.callThrough();
-    // spyOn(service, 'getLanguages').and.callThrough();
-    // spyOn(service, 'getPracticeDeveloperWorkExperiences').and.callThrough;
-    // spyOn(service, 'getSummary').and.callThrough();
-    // spyOn(service, 'getTrainings').and.callThrough();
-    // spyOn(service, 'getCobolDeveloperWorkExperiences').and.callThrough();
-    // spyOn(service, 'getWebDeveloperWorkExperiences').and.callThrough();
   });
 
   it('should be created', () => {
@@ -50,10 +42,10 @@ describe('MainService', () => {
 
     it('should retrieve data when call to get practice developer work experiences endpoint', () => {
       service.language = 'es'; // Cambia el idioma antes de la llamada
-      expect(service.getPracticeDeveloperWorkExperiences()).toBeTruthy();
+      expect(service.getDeveloperWorkExperiences()).toBeTruthy();
 
       service.language = 'en'; // Cambia el idioma antes de la llamada
-      expect(service.getPracticeDeveloperWorkExperiences()).toBeTruthy();
+      expect(service.getDeveloperWorkExperiences()).toBeTruthy();
     });
 
     it('should retrieve data when call to get summary endpoint', () => {
@@ -70,22 +62,6 @@ describe('MainService', () => {
 
       service.language = 'en'; // Cambia el idioma antes de la llamada
       expect(service.getTrainings()).toBeTruthy();
-    });
-
-    it('should retrieve data when call to get Cobol developer experience endpoint', () => {
-      service.language = 'es'; // Cambia el idioma antes de la llamada
-      expect(service.getCobolDeveloperWorkExperiences()).toBeTruthy();
-
-      service.language = 'en'; // Cambia el idioma antes de la llamada
-      expect(service.getCobolDeveloperWorkExperiences()).toBeTruthy();
-    });
-
-    it('should retrieve data when call to get Web developer experience endpoint', () => {
-      service.language = 'es'; // Cambia el idioma antes de la llamada
-      expect(service.getWebDeveloperWorkExperiences()).toBeTruthy();
-
-      service.language = 'en'; // Cambia el idioma antes de la llamada
-      expect(service.getWebDeveloperWorkExperiences()).toBeTruthy();
     });
   });
 });
