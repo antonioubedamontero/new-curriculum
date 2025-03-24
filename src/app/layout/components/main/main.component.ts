@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SummaryResponse, WorkExperienceItemResponse } from '../../../interfaces';
+import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse } from '../../../interfaces';
 
 import { Subscription } from 'rxjs';
 
@@ -17,9 +17,7 @@ export class MainComponent {
   habilities: string[] = [];
   trainings: string[] = [];
   languages: string[] = [];
-  webDeveloperExperiences: WorkExperienceItemResponse[] = [];
-  cobolDeveloperExperiences: WorkExperienceItemResponse[] = [];
-  practiceDeveloperExperiences: WorkExperienceItemResponse[] = [];
+  developerExperiences!: WorkExperiencesResponse;
 
   subscriptions: Subscription[] = [];
 
@@ -30,9 +28,7 @@ export class MainComponent {
     this.getHabilitiesFromServer();
     this.getTrainingsFromServer();
     this.getLanguagesFromServer();
-    this.getWebDeveloperExperiencesFromServer();
-    this.getCobolDeveloperExperiencesFromServer();
-    this.getPracticeDeveloperExperiencesFromServer();
+    this.getDeveloperExperiencesFromServer();
   }
 
   getSummaryFromServer(): void {
@@ -75,34 +71,26 @@ export class MainComponent {
     this.subscriptions.push(subscription);
   }
 
-  getWebDeveloperExperiencesFromServer(): void {
-    const subscription = this.mainService.getWebDeveloperWorkExperiences().subscribe(
+  getDeveloperExperiencesFromServer(): void {
+    const subscription = this.mainService.getDeveloperWorkExperiences().subscribe(
       {
-        next: webDeveloperExperiences => this.webDeveloperExperiences = webDeveloperExperiences.workExperiences,
+        next: developerExperiences => this.developerExperiences = developerExperiences,
         error: error => console.error(error)
       }
     );
     this.subscriptions.push(subscription);
   }
 
-  getCobolDeveloperExperiencesFromServer(): void {
-    const subscription = this.mainService.getCobolDeveloperWorkExperiences().subscribe(
-      {
-        next: cobolDeveloperExperiences => this.cobolDeveloperExperiences = cobolDeveloperExperiences.workExperiences,
-        error: error => console.error(error)
-      }
-    );
-    this.subscriptions.push(subscription);
+  get developerExperiencesSections(): string[] {
+    if (!this.developerExperiences) {
+      return [];
+    }
+
+    return Object.keys(this.developerExperiences);
   }
 
-  getPracticeDeveloperExperiencesFromServer(): void {
-    const subscription = this.mainService.getPracticeDeveloperWorkExperiences().subscribe(
-      {
-        next: pracriceDeveloperExperiences => this.practiceDeveloperExperiences = pracriceDeveloperExperiences.workExperiences,
-        error: error => console.error(error)
-      }
-    );
-    this.subscriptions.push(subscription);
+  getDeveloperExperiencesSectionDetails(developerExperienceSection: string): workExperienceResponseDetail {
+    return this.developerExperiences[developerExperienceSection];
   }
 
   ngOnDestroy(): void {

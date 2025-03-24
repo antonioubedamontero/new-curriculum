@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 import { WorkExperienceItemResponse } from '../../../../../interfaces/workExperience-response.interface';
 
@@ -13,7 +13,7 @@ export class CompanySectionComponent implements OnChanges{
 
   constructor() {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.checkMandatoryInputs();
   }
 

@@ -5,19 +5,13 @@
       "habilities": "Habilidades",
       "training": "Formación",
       "workExperience": "Experiencia Profesional",
-      "webWorkExperience": "Desarrollo Web",
-      "cobolWorkExperience": "Cobol/CICS/DB2/JCL",
-      "practiceWorkExperience": "Prácticas",
       "languages": "Idiomas"
     },
     "ariaLabels": {
-      "habilities": "Icono de la sección de habilidades",
       "summarySection": "Icono de la sección de resumen",
+      "habilities": "Icono de la sección de habilidades",
       "trainingSection": "Icono de la sección de formación",
       "workExperienceSection": "Icono de la sección de experiencia profesional",
-      "webWorkExperienceSection": "Icono de la sección de experiencia profesional en Web",
-      "cobolWorkExperienceSection": "Icono de la sección de experiencia profesional en Cobol",
-      "practiceWorkExperienceSection": "Icono de la sección de prácticas laborales",
       "languageSection": "Icono de la sección de idiomas"
     }
   },

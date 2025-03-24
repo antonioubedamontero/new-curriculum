@@ -37,18 +37,8 @@ export class MainService {
     return this.http.get<LanguagesResponse>(`${this.baseUrl}/${languagesUrl}`);
   }
 
-  getWebDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
-    const webWorkExperiencesUrl = this.language === 'es' ? environment.webWorkExperienceApiEsUrl : environment.webWorkExperienceApiEnUrl;
-    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${webWorkExperiencesUrl}`);
-  }
-
-  getCobolDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
-    const cobolWorkExperiencesUrl = this.language === 'es' ? environment.cobolWorkExperienceApiEsUrl : environment.cobolWorkExperienceApiEnUrl;
-    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${cobolWorkExperiencesUrl}`);
-  }
-
-  getPracticeDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
-    const practiceWorkExperiencesUrl = this.language === 'es' ? environment.practiceWorkExperienceApiEsUrl : environment.practiceWorkExperienceApiEnUrl;
-    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${practiceWorkExperiencesUrl}`);
+  getDeveloperWorkExperiences(): Observable<WorkExperiencesResponse> {
+    const developerWorkExperiencesUrl = this.language === 'es' ? environment.workExperiencesEsUrl : environment.workExperiencesEnUrl;
+    return this.http.get<WorkExperiencesResponse>(`${this.baseUrl}/${developerWorkExperiencesUrl}`);
   }
 }
