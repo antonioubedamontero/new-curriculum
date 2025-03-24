@@ -4,3 +4,4 @@ export * from './habilities-response.interface';
 export * from './trainings-response.interface';
 export * from './languages-response.interface';
 export * from './workExperience-response.interface';
+export * from './network.interface';

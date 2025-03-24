@@ -23,17 +23,5 @@
     "alt": {
       "photoCv": "Fotografía del candidato"
     }
-  },
-  "footer": {
-    "networksAlt": {
-      "linkedin": "Linkedin del candidato",
-      "github": "Github del candidato",
-      "downloadCV": "Descargar CV del candidato"
-    },
-    "networks": {
-      "linkedin": "Linkedin",
-      "github": "Github",
-      "downloadCV": "Curriculum"
-    }
   }
 }

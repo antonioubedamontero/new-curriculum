@@ -1,11 +1,12 @@
+import { NetworkItem } from './network.interface';
+
 export interface IdentificationResponse {
   identification:  Identification;
   role:            string;
   phone:           string;
   email:           string;
   provinceCountry: string;
-  githubUrl:       string;
-  linkedinUrl:     string;
+  netWorks:        NetworkItem[];
 }
 
 export interface Identification {
