@@ -121,5 +121,10 @@ describe('MainComponent', () => {
       const languagesSection = fixture.debugElement.nativeElement.querySelector('.languages-section');
       expect(languagesSection).toBeTruthy();
     });
+
+    it('developerExperiencesSections should give an empty array when developerExperiences doesn\'t exists', () => {
+      (component.developerExperiences as any) = null;
+      expect(component.developerExperiencesSections).toEqual([]);
+    });
   });
 });
