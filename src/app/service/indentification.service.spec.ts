@@ -1,9 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 
-import { of } from 'rxjs';
-
-import { IdentificationResponse } from '../interfaces/indentification-response.interface';
-import { identificationResponseMock } from '../mocks/data/identification-response-mock';
 import { IndentificationService } from './indentification.service';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';

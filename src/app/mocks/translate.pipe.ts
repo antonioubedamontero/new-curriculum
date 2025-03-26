@@ -6,8 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TranslatePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(key: string): string {
+    return key;
   }
-
 }

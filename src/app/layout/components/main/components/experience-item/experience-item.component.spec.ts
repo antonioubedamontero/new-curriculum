@@ -37,7 +37,7 @@ describe('ExperienceItemComponent', () => {
   it('should throw an error if mandatory inputs are not present', () => {
     const errorText = 'Missing project item response in ExperienceItemComponent.';
     expect(() => {
-        (component.companyProject as any) = null;
+        (component.companyProject as unknown) = null;
         component.isRenderTitle = false;
         component['validateMandatoryFields']();
     }).toThrowError(errorText);
