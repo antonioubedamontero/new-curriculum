@@ -9,6 +9,8 @@
     "build": "ng build",
     "build:dev": "ng build --configuration=development",
     "build:prod": "ng build --configuration=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -38,6 +40,7 @@
     "@types/jasmine": "~5.1.0",
     "@types/luxon": "^3.4.2",
     "eslint": "^9.23.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
