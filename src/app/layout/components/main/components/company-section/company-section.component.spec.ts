@@ -63,7 +63,7 @@ describe('CompanySectionComponent', () => {
   it('should thrown and error if input data is not present', () => {
     const errorText = 'Missing company experience in Company Section Component';
     expect(() => {
-      (component.companyExperience as any) = null;
+      (component.companyExperience as unknown) = null;
       component['checkMandatoryInputs']();
     }).toThrowError(errorText);
   });

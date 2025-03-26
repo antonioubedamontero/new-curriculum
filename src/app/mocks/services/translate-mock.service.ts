@@ -8,7 +8,8 @@ export class TranslateServiceMock {
     return 'en';
   }
 
-  use(key: string): any {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  use(key: string): unknown {
     return null;
   };
 }

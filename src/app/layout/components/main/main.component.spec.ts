@@ -25,11 +25,11 @@ describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
 
-  let getSummarySpy: any;
-  let getHabilitiesSpy: any;
-  let getTrainingsSpy: any;
-  let getLanguagesSpy: any;
-  let getDeveloperExperiencesSpy: any;
+  let getSummarySpy: jasmine.Spy;
+  let getHabilitiesSpy: jasmine.Spy;
+  let getTrainingsSpy: jasmine.Spy;
+  let getLanguagesSpy: jasmine.Spy;
+  let getDeveloperExperiencesSpy: jasmine.Spy;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -123,7 +123,7 @@ describe('MainComponent', () => {
     });
 
     it('developerExperiencesSections should give an empty array when developerExperiences doesn\'t exists', () => {
-      (component.developerExperiences as any) = null;
+      (component.developerExperiences as unknown) = null;
       expect(component.developerExperiencesSections).toEqual([]);
     });
   });
