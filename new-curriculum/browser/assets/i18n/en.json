@@ -1,0 +1,27 @@
+{
+  "main": {
+    "sections": {
+      "summary": "Summary",
+      "habilities": "Habilities",
+      "training": "Training",
+      "workExperience": "Profesional Experience",
+      "languages": "Idiomas"
+    },
+    "ariaLabels": {
+      "summarySection": "Summary section icon",
+      "habilities": "Skills section icon",
+      "trainingSection": "Training section icon",
+      "workExperienceSection": "Professional experience section icon",
+      "languageSection": "Language section icon"
+    }
+  },
+  "aside": {
+    "contactInfo": "Contact:",
+    "email": "Email",
+    "phone": "Phone",
+    "city": "City",
+    "alt": {
+      "photoCv": "Photograph of the candidate"
+    }
+  }
+}

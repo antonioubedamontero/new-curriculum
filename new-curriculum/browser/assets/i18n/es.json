@@ -1,0 +1,27 @@
+{
+  "main": {
+    "sections": {
+      "summary": "Resumen",
+      "habilities": "Habilidades",
+      "training": "Formación",
+      "workExperience": "Experiencia Profesional",
+      "languages": "Idiomas"
+    },
+    "ariaLabels": {
+      "summarySection": "Icono de la sección de resumen",
+      "habilities": "Icono de la sección de habilidades",
+      "trainingSection": "Icono de la sección de formación",
+      "workExperienceSection": "Icono de la sección de experiencia profesional",
+      "languageSection": "Icono de la sección de idiomas"
+    }
+  },
+  "aside": {
+    "contactInfo": "Contacto:",
+    "email": "Email",
+    "phone": "Teléfono",
+    "city": "Ciudad",
+    "alt": {
+      "photoCv": "Fotografía del candidato"
+    }
+  }
+}
