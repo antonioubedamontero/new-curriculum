@@ -9,8 +9,7 @@
     "build": "ng build",
     "build:dev": "ng build --configuration=development",
     "build:prod": "ng build --configuration=production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "ng build --configuration=production --base-href=/new-curriculum/ && gh-pages -d dist/new-curriculum",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
