@@ -25,6 +25,10 @@ h2, h3 {
 .languages-section ul {
     padding-block: 1rem;
     list-style-type: circle;
+
+    li {
+      padding-block: 0.2rem;
+    }
 }
 
 .dev-companies {
