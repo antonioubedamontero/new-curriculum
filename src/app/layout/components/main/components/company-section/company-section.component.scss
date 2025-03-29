@@ -5,7 +5,7 @@ h4 {
 }
 
 .company-item {
-  margin-block: 1rem;
+  margin-block: 2rem;
   list-style-type: square;
 
   &__title {
@@ -24,8 +24,8 @@ h4 {
   }
 }
 
-@media (min-width: 600px) {
-  /* sm */
+@media (min-width: 960px) {
+  /* md */
   .company-item {
     &__title {
       display: flex;

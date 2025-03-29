@@ -37,22 +37,30 @@
       </h2>
     </header>
 
-    <section *ngFor="let developerExperienceSection of developerExperiencesSections" class="developer-experience">
-      <header>
-        <h3>
-          <mat-icon aria-hidden="false"
-            [ariaLabel]="getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionAriaTitle| translate"
-            [fontIcon]="getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionIcon"></mat-icon>
-          {{  getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionTitle | translate}}
-        </h3>
-      </header>
+    <mat-accordion class="work-experience-accordion" multi>
+      <section *ngFor="let developerExperienceSection of developerExperiencesSections" class="developer-experience">
+        <mat-expansion-panel class="work-experience-expansion-panel" [expanded]="true">
+          <mat-expansion-panel-header>
+            <header>
+              <h3 class="work-experience-expansion-panel__header">
+                <mat-icon aria-hidden="false"
+                  [ariaLabel]="getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionAriaTitle| translate"
+                  [fontIcon]="getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionIcon"></mat-icon>
+                <span class="developer-experience-section-title">{{  getDeveloperExperiencesSectionDetails(developerExperienceSection).sectionTitle | translate}}</span>
+              </h3>
+            </header>
+          </mat-expansion-panel-header>
 
-      <ul class="dev-companies">
-        <ng-container *ngFor="let companyExperience of getDeveloperExperiencesSectionDetails(developerExperienceSection).workExperiences">
-          <app-company-section [companyExperience]="companyExperience"></app-company-section>
-        </ng-container>
-      </ul>
-    </section>
+          <div class="work-experience-expansion-panel__body">
+            <ul class="dev-companies">
+              <ng-container *ngFor="let companyExperience of getDeveloperExperiencesSectionDetails(developerExperienceSection).workExperiences">
+                <app-company-section [companyExperience]="companyExperience"></app-company-section>
+              </ng-container>
+            </ul>
+          </div>
+        </mat-expansion-panel>
+      </section>
+    </mat-accordion>
   </section>
 
   <section class="languages-section">

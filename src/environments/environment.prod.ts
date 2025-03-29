@@ -11,6 +11,6 @@ export const environment = {
   trainingsApiEnUrl: '/1891e201bb0340e844eac44c5412cfe5/raw/97b87caecd8015573e75827e5f3a3a26951464df/cv-training-en.json',
   languagesApiEsUrl: '/f1a4b3f707b8c0eda472cf52ecb0b25e/raw/baf71f9198da218b3284814aec25e45f090785f6/cv-languages-es.json',
   languagesApiEnUrl: '/702b93d6eace469c4751bd23c60bd5b4/raw/bb8c25129dbeda60bab2846a503b521e0f873608/cv-languages-en.json',
-  workExperiencesEsUrl: '/3f0409a5368515e1aebc8b9614c05d6a/raw/5c916a9941ddad4ea2e785c8a6e3599257098781/cv-experiences-es',
-  workExperiencesEnUrl: '/antonioubedamontero/da1fff710a9da50962b0228709db1b9d/raw/803191855047fdb90264b28f75d0afc0532ae0d7/cv-experiences-en'
+  workExperiencesEsUrl: '/3f0409a5368515e1aebc8b9614c05d6a/raw/20c5032f9dc52bd3aa28d2d9c096871cff21916c/cv-experiences-es',
+  workExperiencesEnUrl: '/da1fff710a9da50962b0228709db1b9d/raw/09f12eae165f5000bfcc329e84b2c984c4d2807b/cv-experiences-en'
 };
