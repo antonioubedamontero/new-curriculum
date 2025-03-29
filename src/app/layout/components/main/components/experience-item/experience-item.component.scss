@@ -28,8 +28,8 @@ h5 {
   font-size: 1rem;
 }
 
-@media (min-width: 600px) {
-  /* sm */
+@media (min-width: 960px) {
+  /* md */
   .experience-item {
     &__title {
       flex-direction: row;
