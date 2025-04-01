@@ -1,5 +1,10 @@
 <aside class="aside">
-  <img class="aside__photo" src="assets/images/photo-cv.jpg" [alt]="'aside.alt.photoCv' | translate">
+  <img
+    class="aside__photo"
+    loading="lazy"
+    src="assets/images/photo-cv.jpg"
+    [alt]="'aside.alt.photoCv' | translate"
+  >
 
   <h2>{{ 'aside.contactInfo' | translate }}</h2>
   <div *ngIf="identificationResponse" class="aside__contact-info">

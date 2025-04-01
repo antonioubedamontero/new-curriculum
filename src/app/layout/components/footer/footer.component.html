@@ -5,14 +5,22 @@
       <ng-container *ngFor="let network of identificationResponse.netWorks">
         <li *ngIf="network.shouldDownLoad" class="networks__container">
           <a [href]="network.url" download>
-            <img [src]="network.icon" [alt]="network.ariaLabel">
+            <img
+              [src]="network.icon"
+              loading="lazy"
+              [alt]="network.ariaLabel"
+            >
           </a>
           <strong>{{ network.label }}</strong>
         </li>
 
         <li *ngIf="!network.shouldDownLoad" class="networks__container">
           <a [href]="network.url" target="_blank">
-            <img [src]="network.icon" [alt]="network.ariaLabel">
+            <img
+              [src]="network.icon"
+              loading="lazy"
+              [alt]="network.ariaLabel"
+            >
           </a>
           <strong>{{ network.label }}</strong>
         </li>

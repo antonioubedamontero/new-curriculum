@@ -41,15 +41,14 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should have app-layout component inside', () => {
+  it('should have a router-outlet inside', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
 
     app.ngOnInit(); // Call explicity onInit (not called automatically)
 
-    const layoutComponent = fixture.debugElement.nativeElement.querySelector('app-layout');
-
-    expect(layoutComponent).toBeTruthy();
+    const routerOutlet = fixture.debugElement.nativeElement.querySelector('router-outlet');
+    expect(routerOutlet).toBeTruthy();
   });
 
   describe('- when storage has language with value..', () => {
