@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
-import { LayoutModule } from './layout/layout.module';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from './shared/shared.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { BaseModule } from './base/base.module';
+import { AppRoutingModule } from './app-routing.module';
 
 // Factory function to create the translation loader
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,6 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -29,7 +29,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
-    LayoutModule,
     SharedModule
   ],
   providers: [

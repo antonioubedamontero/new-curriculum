@@ -11,6 +11,7 @@ import { ExperienceItemComponent } from './components/main/components/experience
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './layout.component';
+import { LayoutRoutingModule } from './layout-routing.module';
 import { MainComponent } from './components/main/main.component';
 import { SharedModule } from "../shared/shared.module";
 
@@ -28,11 +29,9 @@ import { SharedModule } from "../shared/shared.module";
   imports: [
     CommonModule,
     BaseModule,
+    LayoutRoutingModule,
     TranslateModule,
     SharedModule
-  ],
-  exports: [
-    LayoutComponent
   ]
 })
 export class LayoutModule { }
