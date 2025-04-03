@@ -24,7 +24,6 @@ export class AppComponent implements OnDestroy {
   async ngOnInit() {
     const browserLang = this.translationService.getBrowserLang();
     this.translationService.setLanguage(browserLang);
-    this.translationService.setSEO();
 
     this.manageSpinner();
   }

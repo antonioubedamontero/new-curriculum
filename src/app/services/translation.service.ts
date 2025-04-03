@@ -15,7 +15,7 @@ const availableLanguages = ['es', 'en'];
   providedIn: 'root'
 })
 export class TranslationService implements OnDestroy {
-  currentLanguage!: string;
+  currentLanguage = 'es';
 
   translateServiceSubscription?: Subscription;
 
@@ -33,12 +33,15 @@ export class TranslationService implements OnDestroy {
     return this.translate.getBrowserLang() ?? 'es';
   }
 
+
+
   setLanguage(language: string): void {
     this.currentLanguage = availableLanguages.includes(language) ? language : 'es';
     this.translate.use(this.currentLanguage);
+    this.setSEO();
   }
 
-  setSEO(): void {
+  private setSEO(): void {
     this.translateServiceSubscription = this.translate.get('SEO').subscribe(SEO => {
       this.setSEOTitle(SEO.title);
       this.setSEOMetaTags(SEO.metaTags);

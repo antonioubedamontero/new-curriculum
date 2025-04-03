@@ -3,17 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/web-developer'
+    path: 'es',
+    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
   },
   {
-    path: 'web-developer',
+    path: 'en',
     loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
   },
   {
     path: '**',
-    redirectTo: '/web-developer'
+    redirectTo: 'es'
   }
 ];
 

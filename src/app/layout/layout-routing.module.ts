@@ -5,13 +5,12 @@ import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    component:  LayoutComponent
+    path: 'web-developer',
+    component: LayoutComponent,
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'web-developer'
   }
 ];
 

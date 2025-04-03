@@ -5,21 +5,21 @@ import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 
 import { IdentificationResponse } from '../interfaces';
+import { TranslationService } from './translation.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IndentificationService {
   private readonly baseUrl = environment.apiUrl;
-  private readonly language: string;
 
-  constructor(private readonly http: HttpClient) {
-    this.language = localStorage.getItem('language') ?? 'es';
-  }
-
+  constructor(
+    private readonly http: HttpClient,
+    private readonly translationService: TranslationService
+  ) {}
 
   getIdentification(): Observable<IdentificationResponse> {
-    const identificationUrl = this.language === 'es' ? environment.identificationApiEsUrl : environment.identificationApiEnUrl;
+    const identificationUrl = this.translationService.currentLanguage === 'es' ? environment.identificationApiEsUrl : environment.identificationApiEnUrl;
     return this.http.get<IdentificationResponse>(`${this.baseUrl}/${identificationUrl}`);
   }
 }
