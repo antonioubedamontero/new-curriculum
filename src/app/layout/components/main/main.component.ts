@@ -3,7 +3,7 @@ import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse 
 
 import { Subscription } from 'rxjs';
 
-import { MainService } from '../../../service';
+import { MainService } from '../../../services';
 
 @Component({
   selector: 'app-main',

@@ -7,7 +7,7 @@ import { MocksModule } from '../../../mocks/mocks.module';
 import { TranslateServiceMock } from '../../../mocks/services/translate-mock.service';
 
 import { identificationResponseMock } from '../../../mocks/data/identification-response-mock';
-import { IndentificationService } from '../../../service';
+import { IndentificationService } from '../../../services';
 import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
 
 describe('HeaderComponent', () => {

@@ -4,7 +4,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 
 import { TranslateService } from '@ngx-translate/core';
-import { LoadingService } from './service/loading.service';
+import { LoadingService } from './services/loading.service';
 
 interface SEOMetaTags {
   [key: string]: string;

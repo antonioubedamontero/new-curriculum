@@ -5,7 +5,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { MocksModule } from '../../../mocks/mocks.module';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
-import { IndentificationService } from '../../../service';
+import { IndentificationService } from '../../../services';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;

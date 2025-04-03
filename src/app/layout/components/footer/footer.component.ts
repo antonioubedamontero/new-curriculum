@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { DateTime } from 'luxon';
 import { IdentificationResponse } from '../../../interfaces';
-import { IndentificationService } from '../../../service';
+import { IndentificationService } from '../../../services';
 
 @Component({
   selector: 'app-footer',
@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   identificationResponse!: IdentificationResponse;
   subscriptions: Subscription[] = [];
 
-  constructor(private identificationService: IndentificationService) {}
+  constructor(private readonly identificationService: IndentificationService) {}
 
   ngOnInit(): void {
     const susbscription = this.identificationService.getIdentification().subscribe({

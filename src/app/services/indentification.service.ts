@@ -11,10 +11,10 @@ import { IdentificationResponse } from '../interfaces';
 })
 export class IndentificationService {
   private readonly baseUrl = environment.apiUrl;
-  private language: string;
+  private readonly language: string;
 
-  constructor(private http: HttpClient) {
-    this.language = localStorage.getItem('language') || 'es';
+  constructor(private readonly http: HttpClient) {
+    this.language = localStorage.getItem('language') ?? 'es';
   }
 
 
