@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceItemComponent } from './experience-item.component';
-import { projectItemResponseWithProjectAndRangesMock } from '../../../../../mocks/data/main-response-mock';
 import { MaterialModule } from '../../../../../base/material/material.module';
+import { projectItemResponseWithProjectAndRangesMock } from '../../../../mocks/data/main-response-mock';
 
 describe('ExperienceItemComponent', () => {
   let component: ExperienceItemComponent;

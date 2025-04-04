@@ -5,9 +5,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { provideHttpClient } from '@angular/common/http';
 import { MaterialModule } from '../../../base/material/material.module';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { MocksModule } from '../../../mocks/mocks.module';
-import { IndentificationService } from '../../../services';
-import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
+import { MocksModule } from '../../mocks/mocks.module';
+import { IndentificationService } from '../../services';
+import { IdentificationMockService } from '../../mocks/services/identification-mock.service';
 
 describe('AsideComponent', () => {
   let component: AsideComponent;

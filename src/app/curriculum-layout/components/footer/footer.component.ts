@@ -3,8 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { DateTime } from 'luxon';
-import { IdentificationResponse } from '../../../interfaces';
-import { IndentificationService } from '../../../services';
+import { IdentificationResponse } from '../../interfaces';
+import { IndentificationService } from '../../services';
 
 @Component({
   selector: 'app-footer',

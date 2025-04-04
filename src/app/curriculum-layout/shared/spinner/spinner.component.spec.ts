@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SpinnerComponent } from './spinner.component';
-import { BaseModule } from '../../base/base.module';
+import { BaseModule } from '../../../base/base.module';
 
 describe('SpinnerComponent', () => {
   let component: SpinnerComponent;

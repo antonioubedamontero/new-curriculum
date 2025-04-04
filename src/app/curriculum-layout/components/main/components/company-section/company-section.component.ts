@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-
-import { WorkExperienceItemResponse } from '../../../../../interfaces/workExperience-response.interface';
+import { WorkExperienceItemResponse } from '../../../../interfaces';
 
 @Component({
   selector: 'app-company-section',

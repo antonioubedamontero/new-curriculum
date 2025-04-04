@@ -13,7 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CurriculumLayoutComponent } from './curriculum-layout.component';
 import { CurriculumLayoutRoutingModule } from './curriculum-layout-routing.module';
 import { MainComponent } from './components/main/main.component';
-import { SharedModule } from "../shared/shared.module";
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [

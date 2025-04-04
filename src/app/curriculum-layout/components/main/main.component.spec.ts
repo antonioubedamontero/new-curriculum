@@ -6,11 +6,11 @@ import { Component, Input } from '@angular/core';
 import { MaterialModule } from '../../../base/material/material.module';
 
 import { MainComponent } from './main.component';
-import { MainMockService } from '../../../mocks/services/main-mock.service';
-import { MainService } from '../../../services';
-import { MocksModule } from '../../../mocks/mocks.module';
-import { TranslateServiceMock } from '../../../mocks/services/translate-mock.service';
-import { WorkExperienceItemResponse } from '../../../interfaces';
+import { WorkExperienceItemResponse } from '../../interfaces';
+import { MocksModule } from '../../mocks/mocks.module';
+import { TranslateServiceMock } from '../../mocks/services/translate-mock.service';
+import { MainService } from '../../services';
+import { MainMockService } from '../../mocks/services/main-mock.service';
 
 @Component({
   selector: 'app-company-section',

@@ -3,9 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CurriculumLayoutComponent } from './curriculum-layout.component';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { mockActivatedRoute } from '../mocks/services/activated-route-mock.service';
-import { TranslationService } from '../services/translation.service';
-import { TranslationMockService } from '../mocks/services/translation-mock.service';
+import { mockActivatedRoute } from './mocks/services/activated-route-mock.service';
+import { TranslationService } from './services/translation.service';
+import { TranslationMockService } from './mocks/services/translation-mock.service';
 
 @Component({
   selector: 'app-header',

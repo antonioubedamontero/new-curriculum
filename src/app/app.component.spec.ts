@@ -4,8 +4,8 @@ import { AppComponent } from './app.component';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { TranslateServiceMock } from './mocks/services/translate-mock.service';
-import { mockActivatedRoute } from './mocks/services/activated-route-mock.service';
+import { mockActivatedRoute } from './curriculum-layout/mocks/services/activated-route-mock.service';
+import { TranslateServiceMock } from './curriculum-layout/mocks/services/translate-mock.service';
 
 @Component({
   selector: 'app-layout',

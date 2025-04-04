@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TranslationService } from '../services/translation.service';
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-curriculum-layout',

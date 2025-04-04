@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse } from '../../../interfaces';
 
 import { Subscription } from 'rxjs';
-
-import { MainService } from '../../../services';
+import { MainService } from '../../services';
+import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse } from '../../interfaces';
 
 @Component({
   selector: 'app-main',
@@ -21,7 +20,7 @@ export class MainComponent {
 
   subscriptions: Subscription[] = [];
 
-  constructor(private mainService: MainService) {}
+  constructor(private readonly mainService: MainService) {}
 
   ngOnInit(): void {
     this.getSummaryFromServer();

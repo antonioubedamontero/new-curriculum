@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs';
-
-import { IdentificationResponse } from '../../../interfaces';
-import { IndentificationService } from '../../../services';
+import { IdentificationResponse } from '../../interfaces';
+import { IndentificationService } from '../../services';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +15,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   subscriptions: Subscription[] = [];
 
-  constructor(private identificationService: IndentificationService) {}
+  constructor(private readonly identificationService: IndentificationService) {}
 
   ngOnInit(): void {
     const subscription = this.identificationService.getIdentification().subscribe(

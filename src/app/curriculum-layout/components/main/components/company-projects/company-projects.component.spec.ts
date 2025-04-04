@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input } from '@angular/core';
 
 import { CompanyProjectsComponent } from './company-projects.component';
-import { projectItemResponseWithProjectAndRangesMock } from '../../../../../mocks/data/main-response-mock';
-import { Component, Input } from '@angular/core';
-import { ProjectItemResponse } from '../../../../../interfaces';
+import { ProjectItemResponse } from '../../../../interfaces';
+import { projectItemResponseWithProjectAndRangesMock } from '../../../../mocks/data/main-response-mock';
 
 @Component({
   selector: 'app-experience-item',

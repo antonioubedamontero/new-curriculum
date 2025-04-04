@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
 import { provideHttpClient } from '@angular/common/http';
-import { MocksModule } from '../../../mocks/mocks.module';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
-import { IndentificationService } from '../../../services';
+import { MocksModule } from '../../mocks/mocks.module';
+import { IndentificationService } from '../../services';
+import { IdentificationMockService } from '../../mocks/services/identification-mock.service';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;

@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CompanySectionComponent } from './company-section.component';
 import { MaterialModule } from '../../../../../base/material/material.module';
 import { Component, Input } from '@angular/core';
-import { ProjectItemResponse } from '../../../../../interfaces';
-import { workExperienceItemResponseMock1 } from '../../../../../mocks/data/main-response-mock';
+import { ProjectItemResponse } from '../../../../interfaces';
+import { workExperienceItemResponseMock1 } from '../../../../mocks/data/main-response-mock';
 
 @Component({
   selector: 'app-company-projects',

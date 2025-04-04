@@ -3,12 +3,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { MocksModule } from '../../../mocks/mocks.module';
-import { TranslateServiceMock } from '../../../mocks/services/translate-mock.service';
-
-import { identificationResponseMock } from '../../../mocks/data/identification-response-mock';
-import { IndentificationService } from '../../../services';
-import { IdentificationMockService } from '../../../mocks/services/identification-mock.service';
+import { MocksModule } from '../../mocks/mocks.module';
+import { TranslateServiceMock } from '../../mocks/services/translate-mock.service';
+import { IndentificationService } from '../../services';
+import { IdentificationMockService } from '../../mocks/services/identification-mock.service';
+import { identificationResponseMock } from '../../mocks/data/identification-response-mock';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;

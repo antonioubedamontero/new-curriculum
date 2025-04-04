@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { ProjectItemResponse } from '../../../../interfaces';
 
-import { ProjectItemResponse } from '../../../../../interfaces';
 
 @Component({
   selector: 'app-experience-item',

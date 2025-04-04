@@ -6,9 +6,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './curriculum-layout/shared/shared.module';
 
 // Factory function to create the translation loader
 export function HttpLoaderFactory(http: HttpClient) {

@@ -1,9 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
-
-import { LoadingService } from './services/loading.service';
-import { TranslationService } from './services/translation.service';
+import { TranslationService } from './curriculum-layout/services/translation.service';
+import { LoadingService } from './curriculum-layout/services/loading.service';
 
 @Component({
   selector: 'app-root',
