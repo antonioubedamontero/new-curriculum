@@ -24,6 +24,14 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Generate pre render
+
+```npm run build:prod```
+
+To serve in development:
+
+```npm run serve:ssr:new-curriculum```
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
