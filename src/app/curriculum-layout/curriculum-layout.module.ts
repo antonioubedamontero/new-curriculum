@@ -10,8 +10,8 @@ import { CompanySectionComponent } from './components/main/components/company-se
 import { ExperienceItemComponent } from './components/main/components/experience-item/experience-item.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { LayoutComponent } from './layout.component';
-import { LayoutRoutingModule } from './layout-routing.module';
+import { CurriculumLayoutComponent } from './curriculum-layout.component';
+import { CurriculumLayoutRoutingModule } from './curriculum-layout-routing.module';
 import { MainComponent } from './components/main/main.component';
 import { SharedModule } from "../shared/shared.module";
 
@@ -23,15 +23,15 @@ import { SharedModule } from "../shared/shared.module";
     ExperienceItemComponent,
     FooterComponent,
     HeaderComponent,
-    LayoutComponent,
+    CurriculumLayoutComponent,
     MainComponent,
   ],
   imports: [
     CommonModule,
     BaseModule,
-    LayoutRoutingModule,
+    CurriculumLayoutRoutingModule,
     TranslateModule,
     SharedModule
   ]
 })
-export class LayoutModule { }
+export class CurriculumLayoutModule { }

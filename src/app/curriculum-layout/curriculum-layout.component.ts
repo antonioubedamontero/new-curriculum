@@ -3,12 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslationService } from '../services/translation.service';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'app-curriculum-layout',
   standalone: false,
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+  templateUrl: './curriculum-layout.component.html',
+  styleUrl: './curriculum-layout.component.scss'
 })
-export class LayoutComponent implements OnInit {
+export class CurriculumLayoutComponent implements OnInit {
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,

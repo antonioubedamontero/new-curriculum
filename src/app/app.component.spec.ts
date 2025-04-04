@@ -1,10 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { TranslateService } from '@ngx-translate/core';
-import { Component } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { TranslateServiceMock } from './mocks/services/translate-mock.service';
+import { mockActivatedRoute } from './mocks/services/activated-route-mock.service';
 
 @Component({
   selector: 'app-layout',
@@ -24,11 +25,13 @@ describe('AppComponent', () => {
         LayoutComponentMock
       ],
       providers: [
+        { provide: ActivatedRoute, useValue: mockActivatedRoute },
         {
           provide: TranslateService,
           useClass: TranslateServiceMock
         }
       ],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   });
 

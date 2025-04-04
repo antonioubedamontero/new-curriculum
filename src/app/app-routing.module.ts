@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'es',
-    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
+    loadChildren: () => import('./curriculum-layout/curriculum-layout.module').then(m => m.CurriculumLayoutModule)
   },
   {
     path: 'en',
-    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
+    loadChildren: () => import('./curriculum-layout/curriculum-layout.module').then(m => m.CurriculumLayoutModule)
   },
   {
     path: '**',

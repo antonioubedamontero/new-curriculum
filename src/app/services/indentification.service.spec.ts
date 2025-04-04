@@ -4,6 +4,7 @@ import { IndentificationService } from './indentification.service';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { TranslateServiceMock } from '../mocks/services/translate-mock.service';
+import { TranslateService } from '@ngx-translate/core';
 
 describe('IndentificationService', () => {
   let service: IndentificationService;
@@ -11,7 +12,7 @@ describe('IndentificationService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        TranslateServiceMock,
+        { provide: TranslateService, useClass: TranslateServiceMock },
         provideHttpClient(),
         provideHttpClientTesting(),
       ]

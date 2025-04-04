@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LayoutComponent } from './layout.component';
+import { CurriculumLayoutComponent } from './curriculum-layout.component';
 
 const routes: Routes = [
   {
     path: 'web-developer',
-    component: LayoutComponent,
+    component: CurriculumLayoutComponent,
   },
   {
     path: '**',
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LayoutRoutingModule { }
+export class CurriculumLayoutRoutingModule { }

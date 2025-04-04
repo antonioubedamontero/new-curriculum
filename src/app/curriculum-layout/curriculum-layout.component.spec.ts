@@ -1,7 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutComponent } from './layout.component';
+import { CurriculumLayoutComponent } from './curriculum-layout.component';
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { mockActivatedRoute } from '../mocks/services/activated-route-mock.service';
+import { TranslationService } from '../services/translation.service';
+import { TranslationMockService } from '../mocks/services/translation-mock.service';
 
 @Component({
   selector: 'app-header',
@@ -31,23 +35,27 @@ export class MainComponentMock{}
 })
 export class FooterComponentMock{}
 
-describe('LayoutComponent', () => {
-  let component: LayoutComponent;
-  let fixture: ComponentFixture<LayoutComponent>;
+describe('CurriculumLayoutComponent', () => {
+  let component: CurriculumLayoutComponent;
+  let fixture: ComponentFixture<CurriculumLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        LayoutComponent,
+        CurriculumLayoutComponent,
         HeaderComponentMock,
         AsideComponentMock,
         MainComponentMock,
         FooterComponentMock
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: mockActivatedRoute },
+        { provide: TranslationService, useClass: TranslationMockService }
       ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LayoutComponent);
+    fixture = TestBed.createComponent(CurriculumLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
