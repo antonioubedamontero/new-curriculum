@@ -28,7 +28,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ```npm run build:prod```
 
-To serve in development:
+To serve in development: 
 
 ```npm run serve:ssr:new-curriculum```
 
