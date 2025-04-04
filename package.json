@@ -8,7 +8,9 @@
     "start:prod": "ng serve --configuration=production",
     "build": "ng build",
     "build:dev": "ng build --configuration=development",
-    "build:prod": "ng build --configuration=production",
+    "copy:robots": "cp src/robots.txt dist/new-curriculum/server/robots.txt",
+    "copy:sitemap": "cp src/sitemap.xml dist/new-curriculum/server/sitemap.xml",
+    "build:prod": "ng build --configuration=production && npm run copy:robots && npm run copy:sitemap",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:new-curriculum": "node dist/new-curriculum/server/server.mjs"
