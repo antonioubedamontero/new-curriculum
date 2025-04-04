@@ -20,7 +20,7 @@ h2 {
 
   &__photo {
     width: 60%;
-    height: auto;
+    aspect-ratio: 0.68;
     border-radius: 0.5rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   }
