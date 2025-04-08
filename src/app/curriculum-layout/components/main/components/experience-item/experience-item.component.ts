@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { Component, Input, OnChanges } from '@angular/core';
 import { ProjectItemResponse } from '../../../../interfaces';
 

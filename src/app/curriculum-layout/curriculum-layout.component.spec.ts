@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CurriculumLayoutComponent } from './curriculum-layout.component';
@@ -12,28 +13,28 @@ import { TranslationMockService } from './mocks/services/translation-mock.servic
   standalone: false,
   template: '<p>header</p>',
 })
-export class HeaderComponentMock{}
+export class HeaderMockComponent{}
 
 @Component({
   selector: 'app-aside',
   standalone: false,
   template: '<p>aside</p>',
 })
-export class AsideComponentMock{}
+export class AsideMockComponent{}
 
 @Component({
   selector: 'app-main',
   standalone: false,
   template: '<p>main</p>',
 })
-export class MainComponentMock{}
+export class MainMockComponent{}
 
 @Component({
   selector: 'app-footer',
   standalone: false,
   template: '<p>footer</p>',
 })
-export class FooterComponentMock{}
+export class FooterMockComponent{}
 
 describe('CurriculumLayoutComponent', () => {
   let component: CurriculumLayoutComponent;
@@ -43,10 +44,10 @@ describe('CurriculumLayoutComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         CurriculumLayoutComponent,
-        HeaderComponentMock,
-        AsideComponentMock,
-        MainComponentMock,
-        FooterComponentMock
+        HeaderMockComponent,
+        AsideMockComponent,
+        MainMockComponent,
+        FooterMockComponent
       ],
       providers: [
         { provide: ActivatedRoute, useValue: mockActivatedRoute },

@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { TranslateServiceMock } from './curriculum-layout/mocks/services/transla
   standalone: false,
   template: '<p>layout</p>',
 })
-export class LayoutComponentMock{}
+export class LayoutMockComponent{}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -22,7 +23,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        LayoutComponentMock
+        LayoutMockComponent
       ],
       providers: [
         { provide: ActivatedRoute, useValue: mockActivatedRoute },

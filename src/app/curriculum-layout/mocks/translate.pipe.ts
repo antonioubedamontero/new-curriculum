@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

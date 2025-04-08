@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-indexed-object-style */
 import { Injectable, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
