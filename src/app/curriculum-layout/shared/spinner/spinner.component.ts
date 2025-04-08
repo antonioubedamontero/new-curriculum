@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+/* eslint-disable @angular-eslint/prefer-standalone */
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-spinner',
@@ -6,6 +7,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './spinner.component.html',
   styleUrl: './spinner.component.scss'
 })
-export class SpinnerComponent {
-  constructor() {}
-}
+export class SpinnerComponent {}

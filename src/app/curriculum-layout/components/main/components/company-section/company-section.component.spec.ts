@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CompanySectionComponent } from './company-section.component';
@@ -11,7 +12,7 @@ import { workExperienceItemResponseMock1 } from '../../../../mocks/data/main-res
   standalone: false,
   template: '<p>company-projects</p>',
 })
-export class CompanyProjetsComponentMock{
+export class CompanyProjetsMockComponent{
   @Input() companyProjects: ProjectItemResponse[] = [];
 }
 
@@ -23,7 +24,7 @@ describe('CompanySectionComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         CompanySectionComponent,
-        CompanyProjetsComponentMock
+        CompanyProjetsMockComponent
       ],
       imports: [
         MaterialModule

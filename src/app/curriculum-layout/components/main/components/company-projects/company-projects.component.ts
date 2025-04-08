@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { Component, Input } from '@angular/core';
 import { ProjectItemResponse } from '../../../../interfaces';
 
@@ -9,8 +10,6 @@ import { ProjectItemResponse } from '../../../../interfaces';
 })
 export class CompanyProjectsComponent {
   @Input() companyProjects: ProjectItemResponse[] = [];
-
-  constructor() {}
 
   get firstProject(): ProjectItemResponse {
     return this.companyProjects[0];

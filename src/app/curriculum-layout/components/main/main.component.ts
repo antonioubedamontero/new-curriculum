@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+/* eslint-disable @angular-eslint/prefer-standalone */
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { MainService } from '../../services';
-import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse } from '../../interfaces';
+import { SummaryResponse, WorkExperienceResponseDetail, WorkExperiencesResponse } from '../../interfaces';
 
 @Component({
   selector: 'app-main',
@@ -10,7 +11,7 @@ import { SummaryResponse, workExperienceResponseDetail, WorkExperiencesResponse 
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent {
+export class MainComponent implements OnInit, OnDestroy{
   summaryResponse!: SummaryResponse;
 
   habilities: string[] = [];
@@ -88,7 +89,7 @@ export class MainComponent {
     return Object.keys(this.developerExperiences);
   }
 
-  getDeveloperExperiencesSectionDetails(developerExperienceSection: string): workExperienceResponseDetail {
+  getDeveloperExperiencesSectionDetails(developerExperienceSection: string): WorkExperienceResponseDetail {
     return this.developerExperiences[developerExperienceSection];
   }
 

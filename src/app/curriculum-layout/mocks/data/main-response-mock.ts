@@ -1,4 +1,4 @@
-import { HabilitiesResponse, LanguagesResponse, ProjectItemResponse, SummaryResponse, TrainingsResponse, WorkExperienceItemResponse, workExperienceResponseDetail, WorkExperiencesResponse } from "../../interfaces";
+import { HabilitiesResponse, LanguagesResponse, ProjectItemResponse, SummaryResponse, TrainingsResponse, WorkExperienceItemResponse, WorkExperienceResponseDetail, WorkExperiencesResponse } from "../../interfaces";
 
 export const summaryResponseMock: SummaryResponse = {
   summary: 'mock summary'
@@ -41,7 +41,7 @@ export const workExperienceItemResponseMock2: WorkExperienceItemResponse = {
   projects: [projectItemResponseWithoutProjectAndRangesMock]
 }
 
-export const workExperienceResponseDetailMock: workExperienceResponseDetail = {
+export const workExperienceResponseDetailMock: WorkExperienceResponseDetail = {
   sectionTitle: 'work section title mock',
     sectionIcon: 'icon section title mock',
     sectionAriaTitle: 'aria section title mock',

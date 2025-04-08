@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { Component, Input, OnChanges } from '@angular/core';
 import { WorkExperienceItemResponse } from '../../../../interfaces';
 
@@ -9,8 +10,6 @@ import { WorkExperienceItemResponse } from '../../../../interfaces';
 })
 export class CompanySectionComponent implements OnChanges{
   @Input() companyExperience!: WorkExperienceItemResponse;
-
-  constructor() {}
 
   ngOnChanges(): void {
     this.checkMandatoryInputs();

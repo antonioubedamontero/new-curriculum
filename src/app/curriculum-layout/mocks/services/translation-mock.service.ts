@@ -7,8 +7,6 @@ import { of } from 'rxjs';
 export class TranslationMockService {
   currentLanguage = 'es';
 
-  constructor() { }
-
   getBrowserLang(): string {
     return 'es';
   }
