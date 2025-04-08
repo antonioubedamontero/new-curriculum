@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslationService } from './services/translation.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-curriculum-layout',
@@ -12,9 +13,12 @@ import { TranslationService } from './services/translation.service';
 export class CurriculumLayoutComponent implements OnInit {
 
   constructor(
+    private readonly translate: TranslateService,
     private readonly activatedRoute: ActivatedRoute,
     private readonly translationService: TranslationService
-  ){}
+  ){
+    this.translate.setDefaultLang('es');
+  }
 
   ngOnInit(): void {
     const language = this.activatedRoute.snapshot.parent?.url[0].path ?? 'es';

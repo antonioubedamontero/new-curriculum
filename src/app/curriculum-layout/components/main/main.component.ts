@@ -31,6 +31,10 @@ export class MainComponent implements OnInit, OnDestroy{
     this.getDeveloperExperiencesFromServer();
   }
 
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(subscription => subscription.unsubscribe());
+  }
+
   getSummaryFromServer(): void {
     const subscription = this.mainService.getSummary().subscribe(
       {
@@ -91,9 +95,5 @@ export class MainComponent implements OnInit, OnDestroy{
 
   getDeveloperExperiencesSectionDetails(developerExperienceSection: string): WorkExperienceResponseDetail {
     return this.developerExperiences[developerExperienceSection];
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
 }

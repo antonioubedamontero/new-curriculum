@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { mockActivatedRoute } from './mocks/services/activated-route-mock.service';
 import { TranslationService } from './services/translation.service';
 import { TranslationMockService } from './mocks/services/translation-mock.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -50,6 +51,7 @@ describe('CurriculumLayoutComponent', () => {
         FooterMockComponent
       ],
       providers: [
+        { provide: TranslateService, useClass: TranslationMockService},
         { provide: ActivatedRoute, useValue: mockActivatedRoute },
         { provide: TranslationService, useClass: TranslationMockService }
       ]
